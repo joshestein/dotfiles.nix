@@ -43,6 +43,6 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  imports = [ ./git.nix ./packages.nix ./programs.nix ./zsh.nix ];
+  imports = [ ./git.nix ./packages.nix ./programs.nix ];
 }
 
