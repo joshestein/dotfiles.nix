@@ -21,6 +21,6 @@
     enableZshIntegration = true;
   };
 
-  imports = [ ./git.nix ./packages.nix ./zsh.nix ];
+  imports = [ ./git.nix ./packages.nix ./other.nix ./zsh.nix ];
 }
 
