@@ -2,6 +2,9 @@
   programs.zsh = {
     enable = true;
     initExtra = builtins.readFile ./.zshrc;
+    autosuggestion = { enable = true; };
+    enableCompletion = true;
+    syntaxHighlighting = { enable = true; };
     shellAliases = {
       cat = "bat";
       hg = "history | grep";
