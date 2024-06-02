@@ -42,7 +42,6 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 [ -f $XDG_CONFIG_HOME/shell/functions.zsh ] && source $XDG_CONFIG_HOME/shell/functions.zsh
-[ -f $XDG_CONFIG_HOME/shell/aliasrc ] && source $XDG_CONFIG_HOME/shell/aliasrc
 [ -f $XDG_CONFIG_HOME/shell/git.zsh ] && source $XDG_CONFIG_HOME/shell/git.zsh
 [ -f $XDG_CONFIG_HOME/zsh/plugins/git ] && source $XDG_CONFIG_HOME/zsh/plugins/git/git.plugin/zsh
 
