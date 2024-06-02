@@ -3,5 +3,6 @@
     pkgs.jq
     pkgs.lf
     pkgs.ripgrep
+    pkgs.volta
   ];
 }
