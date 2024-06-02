@@ -53,6 +53,6 @@
     enableZshIntegration = true;
   };
 
-  imports = [ ./git.nix ./packages.nix ./other.nix ./zsh.nix ];
+  imports = [ ./git.nix ./packages.nix ./programs.nix ./zsh.nix ];
 }
 
