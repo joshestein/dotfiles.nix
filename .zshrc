@@ -55,14 +55,6 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init --path)"
-fi
-
-if command -v rbenv 1>/dev/null 2>&1; then
-  eval "$(rbenv init - zsh)"
-fi
-
 bindkey '^F' fzf-file-widget
 bindkey '^P' fzf-file-widget
 bindkey '^[[102;9u' fzf-file-widget
