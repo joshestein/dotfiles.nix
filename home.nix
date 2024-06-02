@@ -21,6 +21,10 @@
     enableZshIntegration = true;
   };
 
-  imports = [ ./git.nix ];
+  programs.eza = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
 }
 
