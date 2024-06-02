@@ -26,5 +26,6 @@
     enableZshIntegration = true;
   };
 
+  imports = [ ./git.nix ./packages.nix ];
 }
 
