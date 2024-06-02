@@ -1,4 +1,9 @@
 {
+  programs.bat = {
+    enable = true;
+    config.theme = "gruvbox-dark";
+  };
+
   programs.fd = {
     enable = true;
   };
