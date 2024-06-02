@@ -8,5 +8,8 @@
       init = { defaultBranch = "main"; };
       pull = { ff = "only"; };
     };
+    aliases = {
+      diff = "diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'";
+    };
   };
 }
