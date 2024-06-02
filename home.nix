@@ -43,16 +43,6 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
-  programs.eza = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
   imports = [ ./git.nix ./packages.nix ./programs.nix ./zsh.nix ];
 }
 
