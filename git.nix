@@ -10,6 +10,8 @@
     };
     aliases = {
       diff = "diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'";
+      last = "log -1 HEAD";
+      unstage = "reset HEAD --";
     };
   };
 }
