@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ lib, pkgs, ... }: {
   home.packages = [
     pkgs.curl
     pkgs.ffmpeg
@@ -9,6 +9,12 @@
     pkgs.ripgrep
     pkgs.rustup
     pkgs.yt-dlp-light
+    pkgs.vscode
     pkgs.volta
   ];
+
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "vscode"
+    ];
 }
