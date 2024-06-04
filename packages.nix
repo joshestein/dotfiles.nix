@@ -1,10 +1,10 @@
 { pkgs, ... }: {
   home.packages = [
     pkgs.ffmpeg
-    (pkgs.nerdfonts.override { fonts = [ "DroidSansMono" ]; })
     pkgs.jq
     pkgs.lf
     pkgs.neovim
+    (pkgs.nerdfonts.override { fonts = [ "DroidSansMono" ]; })
     pkgs.ripgrep
     pkgs.yt-dlp-light
     pkgs.volta
