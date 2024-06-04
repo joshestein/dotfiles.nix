@@ -4,16 +4,6 @@
     config.theme = "gruvbox-dark";
   };
 
-  # programs.emacs = {
-  #   enable = true;
-  #   package = pkgs.emacs;
-  # };
-
-  # services.emacs = {
-  #   enable = true;
-  #   package = pkgs.emacs;
-  # };
-
   programs.eza = {
     enable = true;
     enableZshIntegration = true;
