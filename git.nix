@@ -8,6 +8,7 @@
       init = { defaultBranch = "main"; };
       pull = { ff = "only"; };
     };
+    delta = { enable = true; };
     aliases = {
       diff = "diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'";
       last = "log -1 HEAD";
