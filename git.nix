@@ -3,10 +3,11 @@
     enable = true;
     userName = "Josh";
     userEmail = "josh.e.stein@gmail.com";
-    ignores = [ "*~" ".DS_Store" ".direnv" ".venv" ];
+    ignores = [ "*~" ".DS_Store" ".direnv" ".venv" ".idea" ".vscode" ];
     extraConfig = {
       init = { defaultBranch = "main"; };
       pull = { ff = "only"; };
+      push = { autoSetupRemote = "true"; };
     };
     delta = { enable = true; };
     aliases = {
