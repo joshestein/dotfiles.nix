@@ -1,5 +1,6 @@
 { lib, pkgs, ... }: {
   home.packages = [
+    pkgs.coreutils
     pkgs.curl
     pkgs.ffmpeg
     pkgs.jq
