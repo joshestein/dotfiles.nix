@@ -6,6 +6,7 @@
     pkgs.lf
     pkgs.neovim
     pkgs.ripgrep
+    pkgs.yt-dlp-light
     pkgs.volta
   ];
 }

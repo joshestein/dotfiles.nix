@@ -25,6 +25,7 @@
       ns = "npm start";
       p = "python";
       sv = "sudoedit";
+      yt = "yt-dlp";
       v = "nvim";
 
       bc = "bc -ql";
