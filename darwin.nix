@@ -34,5 +34,7 @@
       FXEnableExtensionChangeWarning = false;
     };
   };
+
+  security.pam.enableSudoTouchIdAuth = true;
 }
 
