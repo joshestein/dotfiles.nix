@@ -43,7 +43,7 @@
     enable = true;
 
     casks = [
-      "emacs-app-monthly"
+      "emacs-app"
       "firefox"
       "keycastr"
       "raycast"
