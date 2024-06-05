@@ -43,6 +43,6 @@
 
   fonts.fontconfig.enable = true;
 
-  imports = [ ./git.nix ./shared-packages.nix ./programs.nix ];
+  imports = [ ./git.nix ./packages.nix ./programs.nix ];
 }
 
