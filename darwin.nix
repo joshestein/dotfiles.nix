@@ -36,5 +36,19 @@
   };
 
   security.pam.enableSudoTouchIdAuth = true;
+
+  homebrew = {
+    enable = true;
+
+    casks = [
+      "emacs-app-monthly"
+      # "firefox"
+      "keycastr"
+      "vlc"
+    ];
+    taps = [
+      "jimeh/emacs-builds"
+    ];
+  };
 }
 
