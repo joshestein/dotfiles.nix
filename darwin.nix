@@ -46,6 +46,7 @@
       "emacs-app-monthly"
       "firefox"
       "keycastr"
+      "raycast"
       "vlc"
     ];
     taps = [

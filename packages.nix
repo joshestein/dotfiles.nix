@@ -16,7 +16,6 @@
     pkgs.volta
   ] ++ lib.optionals pkgs.stdenv.isDarwin [
     pkgs.appcleaner
-    pkgs.raycast
     pkgs.karabiner-elements
     pkgs.goku
   ];
