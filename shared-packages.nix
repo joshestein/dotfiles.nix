@@ -7,6 +7,7 @@
     pkgs.lf
     pkgs.neovim
     (pkgs.nerdfonts.override { fonts = [ "DroidSansMono" ]; })
+    pkgs.obsidian
     pkgs.spotify
     pkgs.ripgrep
     pkgs.rustup
