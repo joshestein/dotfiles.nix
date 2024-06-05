@@ -15,6 +15,7 @@
     pkgs.vscode
     pkgs.volta
   ] ++ lib.optionals pkgs.stdenv.isDarwin [
+    pkgs.appcleaner
     pkgs.raycast
   ];
 }
