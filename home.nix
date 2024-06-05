@@ -38,6 +38,21 @@
       "....." = "../../../..";
   };
 
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+    PAGER = "less";
+    LESS = "-R";
+    LESS_ADVANCED_PREPROCESSOR = "yes";
+    LESS_TERMCAP_mb = "\E[1;32m";
+    LESS_TERMCAP_md = "\E[1;32m";
+    LESS_TERMCAP_me = "\E[0m";
+    LESS_TERMCAP_se = "\E[0m";
+    LESS_TERMCAP_so = "\E[01;47;34m";
+    LESS_TERMCAP_ue = "\E[0m";
+    LESS_TERMCAP_us = "\E[1;36m";
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
