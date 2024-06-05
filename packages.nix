@@ -14,5 +14,7 @@
     pkgs.yt-dlp-light
     pkgs.vscode
     pkgs.volta
+  ] ++ lib.optionals pkgs.stdenv.isDarwin [
+    pkgs.raycast
   ];
 }
