@@ -27,6 +27,12 @@
       orientation = "left";
       show-recents = false;
     };
+
+    finder = {
+      AppleShowAllExtensions = true;
+      ShowPathbar = true;
+      FXEnableExtensionChangeWarning = false;
+    };
   };
 }
 
