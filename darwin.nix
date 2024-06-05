@@ -42,7 +42,7 @@
 
     casks = [
       "emacs-app-monthly"
-      # "firefox"
+      "firefox"
       "keycastr"
       "vlc"
     ];
