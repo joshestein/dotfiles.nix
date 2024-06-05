@@ -20,8 +20,10 @@
       modules = [
         # The platform the configuration will be used on.
         { nixpkgs.hostPlatform = "aarch64-darwin"; }
-        ./unfree.nix
+
         ./darwin.nix 
+        ./unfree.nix
+
         home-manager.darwinModules.home-manager {
           home-manager.useGlobalPkgs = true;
 # home-manager.useUserPackages = true; # this BREAKS EVERYTHING SO SAD WHY
