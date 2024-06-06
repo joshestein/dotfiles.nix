@@ -32,6 +32,8 @@ vim.keymap.set('n', '^\\>', '<cmd>tab terminal<CR>')
 vim.keymap.set('n', '<S-h>', 'gT')
 vim.keymap.set('n', '<S-l>', 'gt')
 
+vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'Paste without yanking' })
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
