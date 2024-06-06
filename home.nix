@@ -51,6 +51,8 @@
     LESS_TERMCAP_so = "\E[01;47;34m";
     LESS_TERMCAP_ue = "\E[0m";
     LESS_TERMCAP_us = "\E[1;36m";
+    LANG = "en_US.UTF-8";
+    LC_ALL = "en_US.UTF-8";
   };
 
   # Let Home Manager install and manage itself.
