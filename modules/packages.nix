@@ -15,6 +15,13 @@
     pkgs.vscode
     pkgs.volta
 
+    # LSP stuff
+    # It is possible to install these manually, or with Mason, but having them here is easiest
+    pkgs.black
+    pkgs.isort
+    pkgs.prettierd
+    pkgs.typescript
+
     # pyenv dependencies
     pkgs.openssl_3_3
     pkgs.readline
