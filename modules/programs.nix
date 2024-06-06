@@ -18,7 +18,7 @@
 
   programs.kitty = {
     enable = true;
-    extraConfig = builtins.readFile ./.kitty.conf;
+    extraConfig = builtins.readFile ../config-files/.kitty.conf;
     shellIntegration = { enableZshIntegration = true; };
     theme = "Gruvbox Dark";
   };
@@ -35,7 +35,7 @@
 
   programs.zsh = {
     enable = true;
-    initExtra = builtins.readFile ./.zshrc;
+    initExtra = builtins.readFile ../config-files/.zshrc;
     autosuggestion = { enable = true; };
     enableCompletion = true;
     syntaxHighlighting = { enable = true; };

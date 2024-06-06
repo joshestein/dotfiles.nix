@@ -44,6 +44,7 @@
     PAGER = "less";
     LESS = "-R";
     LESS_ADVANCED_PREPROCESSOR = "yes";
+    # TODO: fix these colours not working
     LESS_TERMCAP_mb = "\E[1;32m";
     LESS_TERMCAP_md = "\E[1;32m";
     LESS_TERMCAP_me = "\E[0m";
@@ -60,7 +61,7 @@
 
   fonts.fontconfig.enable = true;
 
-  xdg.configFile."nvim".source = ./nvim;
+  xdg.configFile."nvim".source = ../nvim;
 
   imports = [ ./fd.nix ./git.nix ./packages.nix ./programs.nix ];
 }

@@ -21,13 +21,13 @@
         # The platform the configuration will be used on.
         { nixpkgs.hostPlatform = "aarch64-darwin"; }
 
-        ./darwin.nix 
-        ./unfree.nix
+        ./modules/darwin.nix 
+        ./modules/unfree.nix
 
         home-manager.darwinModules.home-manager {
           home-manager.useGlobalPkgs = true;
 # home-manager.useUserPackages = true; # this BREAKS EVERYTHING SO SAD WHY
-          home-manager.users.joshstein = import ./home.nix;
+          home-manager.users.joshstein = import ./modules/home.nix;
         }
       ];
       specialArgs = { inherit self; };

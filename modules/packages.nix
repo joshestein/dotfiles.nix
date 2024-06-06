@@ -16,7 +16,7 @@
     pkgs.volta
 
     # pyenv dependencies
-    pkgs.openssl
+    pkgs.openssl_3_3
     pkgs.readline
     pkgs.sqlite
     pkgs.xz
