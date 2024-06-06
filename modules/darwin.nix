@@ -42,15 +42,24 @@
   homebrew = {
     enable = true;
 
+    brews = [
+      {
+        name = "emacs-plus";
+        args = [ "with-native-comp" ];
+      }
+    ];
+
     casks = [
-      "emacs-app"
+      # "emacs-app"
       "firefox"
       "keycastr"
       "raycast"
       "vlc"
     ];
     taps = [
-      "jimeh/emacs-builds"
+      # This brew is leading to gcc native compilation errors
+      # "jimeh/emacs-builds" # for emacs-app
+      "d12frosted/emacs-plus" # for emacs-plus
     ];
   };
 }
