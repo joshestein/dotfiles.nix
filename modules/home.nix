@@ -40,6 +40,7 @@
 
   home.sessionPath = [
     "$HOME/.local/bin"
+    "$HOME/.config/emacs" # doom
   ];
 
   home.sessionVariables = {
