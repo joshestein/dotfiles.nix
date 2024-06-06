@@ -15,14 +15,22 @@ vim.keymap.set('n', '<D-u>', '<C-u>')
 vim.keymap.set('n', '<D-o>', '<C-o>')
 vim.keymap.set('n', '<D-i>', '<C-i>')
 
+-- Buffers
 vim.keymap.set('n', '<leader>bp', '<cmd>bprev<CR>', { desc = 'Go to [P]revious buffer' })
 vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = 'Go to [N]ext buffer' })
 
+-- Splits
 vim.keymap.set('n', '<leader>vs', '<cmd>vsplit<CR>', { desc = 'Open new vertical split' })
 vim.keymap.set('n', '<leader>hs', '<cmd>split<CR>', { desc = 'Open new horizontal split' })
 
+-- Terminal hotkey
 vim.keymap.set('n', '<C-\\>', '<cmd>tab terminal<CR>')
 vim.keymap.set('n', '<D-\\>', '<cmd>tab terminal<CR>')
+vim.keymap.set('n', '^\\>', '<cmd>tab terminal<CR>')
+
+-- Tabs
+vim.keymap.set('n', '<S-h>', 'gT')
+vim.keymap.set('n', '<S-l>', 'gt')
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
