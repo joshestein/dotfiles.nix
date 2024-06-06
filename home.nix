@@ -60,6 +60,8 @@
 
   fonts.fontconfig.enable = true;
 
+  xdg.configFile."nvim".source = ./nvim;
+
   imports = [ ./git.nix ./packages.nix ./programs.nix ];
 }
 
