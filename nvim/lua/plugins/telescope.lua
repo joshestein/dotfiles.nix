@@ -48,14 +48,14 @@ return {
       require('telescope').setup {
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
-        -- defaults = {
-        --   mappings = {
-        --     n = {
-        --       ['<D-n>'] = require('telescope.actions').move_selection_next,
-        --       ['<D-p>'] = require('telescope.actions').move_selection_previous,
-        --     },
-        --   },
-        -- },
+        defaults = {
+          mappings = {
+            i = {
+              ['<D-n>'] = require('telescope.actions').move_selection_next,
+              ['<D-p>'] = require('telescope.actions').move_selection_previous,
+            },
+          },
+        },
         -- pickers = {}
         extensions = {
           ['ui-select'] = {
