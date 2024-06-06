@@ -48,14 +48,6 @@
       "keycastr"
       "raycast"
       "vlc"
-
-      # pyenv dependencies
-      "openssl"
-      "readline"
-      "sqlite3"
-      "xz"
-      "zlib"
-      "tcl-tk"
     ];
     taps = [
       "jimeh/emacs-builds"
