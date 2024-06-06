@@ -62,6 +62,6 @@
 
   xdg.configFile."nvim".source = ./nvim;
 
-  imports = [ ./git.nix ./packages.nix ./programs.nix ];
+  imports = [ ./fd.nix ./git.nix ./packages.nix ./programs.nix ];
 }
 
