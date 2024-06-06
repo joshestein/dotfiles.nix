@@ -14,8 +14,9 @@ vim.keymap.set('n', '<D-d>', '<C-d>')
 vim.keymap.set('n', '<D-u>', '<C-u>')
 vim.keymap.set('n', '<D-o>', '<C-o>')
 vim.keymap.set('n', '<D-i>', '<C-i>')
-vim.keymap.set('n', '<D-n>', '<C-n>')
-vim.keymap.set('n', '<D-p>', '<C-p>')
+
+vim.keymap.set('n', '<leader>bp', '<cmd>bprev<CR>', { desc = 'Go to [P]revious buffer' })
+vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = 'Go to [N]ext buffer' })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
