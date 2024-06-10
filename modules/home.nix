@@ -13,9 +13,9 @@
       gca = "git commit --amend";
       gco = "git checkout";
       gpu = "git pull";
-      l = "eza --long --all --git";
-      ll = "eza --long --git";
-      lt = "eza --tree";
+      l = "eza --long --all --git --hyperlink";
+      ll = "eza --long --git --hyperlink";
+      lt = "eza --tree --hyperlink";
       md = "mkcdir";
       nb = "npm run build";
       ni = "npm install";
