@@ -21,6 +21,7 @@
       ni = "npm install";
       ns = "npm start";
       p = "python";
+      s = "kitten ssh";
       sv = "sudoedit";
       yt = "yt-dlp";
       v = "nvim";
