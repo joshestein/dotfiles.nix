@@ -43,6 +43,7 @@
     enable = true;
 
     brews = [
+      "goku"
       {
         name = "emacs-plus";
         args = [ "with-native-comp" ];
@@ -62,6 +63,7 @@
       # "jimeh/emacs-builds" # for emacs-app
       "d12frosted/emacs-plus" # for emacs-plus
       "nikitabobko/tap" # for Aerospace
+      "yqrashawn/goku"
     ];
   };
 }
