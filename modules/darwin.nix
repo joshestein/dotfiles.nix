@@ -51,6 +51,7 @@
 
     casks = [
       # "emacs-app"
+      "aerospace"
       "firefox"
       "keycastr"
       "raycast"
@@ -60,6 +61,7 @@
       # This brew is leading to gcc native compilation errors
       # "jimeh/emacs-builds" # for emacs-app
       "d12frosted/emacs-plus" # for emacs-plus
+      "nikitabobko/tap" # for Aerospace
     ];
   };
 }

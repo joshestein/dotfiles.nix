@@ -74,6 +74,7 @@
   fonts.fontconfig.enable = true;
 
   xdg.configFile."nvim".source = ../nvim;
+  xdg.configFile."aerospace/aerospace.toml".source = ../config/aerospace.toml;
 
   imports = [ ./fd.nix ./git.nix ./packages.nix ./programs.nix ];
 }
