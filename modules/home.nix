@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -52,8 +52,6 @@
     EDITOR = "nvim";
     VISUAL = "nvim";
 
-    GOKU_EDN_CONFIG_FILE = "$HOME/.config/karabiner/karabiner.edn";
-
     PAGER = "less";
     LESS = "-R";
     LESS_ADVANCED_PREPROCESSOR = "yes";
@@ -62,6 +60,8 @@
 
     MANPAGER="sh -c 'col -bx | bat -l man -p'";
     MANROFFOPT="-c";
+  } // lib.optionalAttrs pkgs.stdenv.isDarwin {
+    GOKU_EDN_CONFIG_FILE = "$HOME/.config/karabiner/karabiner.edn";
   };
 
   # Let Home Manager install and manage itself.
@@ -70,8 +70,12 @@
   fonts.fontconfig.enable = true;
 
   xdg.configFile."nvim".source = ../nvim;
-  xdg.configFile."karabiner/karabiner.edn".source = ../config/karabiner.edn;
-  xdg.configFile."aerospace/aerospace.toml".source = ../config/aerospace.toml;
+  xdg.configFile."karabiner/karabiner.edn" = (lib.mkIf pkgs.stdenv.isDarwin {
+    source = ../config/karabiner.edn;
+  });
+  xdg.configFile."aerospace/aerospace.toml" = (lib.mkIf pkgs.stdenv.isDarwin {
+    source = ../config/aerospace.toml;
+  });
 
   imports = [ ./fd.nix ./git.nix ./packages.nix ./programs.nix ];
 }
