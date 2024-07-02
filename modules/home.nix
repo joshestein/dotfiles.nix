@@ -25,6 +25,7 @@
       sv = "sudoedit";
       yt = "yt-dlp";
       v = "nvim";
+      venv = "python -m venv .venv && source .venv/bin/activate";
 
       bc = "bc -ql";
       cp = "cp -iv";
