@@ -52,6 +52,8 @@
     EDITOR = "nvim";
     VISUAL = "nvim";
 
+    GOKU_EDN_CONFIG_FILE = "$HOME/.config/karabiner/karabiner.edn";
+
     PAGER = "less";
     LESS = "-R";
     LESS_ADVANCED_PREPROCESSOR = "yes";
@@ -74,6 +76,7 @@
   fonts.fontconfig.enable = true;
 
   xdg.configFile."nvim".source = ../nvim;
+  xdg.configFile."karabiner/karabiner.edn".source = ../config/karabiner.edn;
   xdg.configFile."aerospace/aerospace.toml".source = ../config/aerospace.toml;
 
   imports = [ ./fd.nix ./git.nix ./packages.nix ./programs.nix ];
