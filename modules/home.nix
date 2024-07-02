@@ -57,17 +57,11 @@
     PAGER = "less";
     LESS = "-R";
     LESS_ADVANCED_PREPROCESSOR = "yes";
-    # TODO: fix these colours not working
-    LESS_TERMCAP_mb = "\E[1;32m";
-    LESS_TERMCAP_md = "\E[1;32m";
-    LESS_TERMCAP_me = "\E[0m";
-    LESS_TERMCAP_se = "\E[0m";
-    LESS_TERMCAP_so = "\E[01;47;34m";
-    LESS_TERMCAP_ue = "\E[0m";
-    LESS_TERMCAP_us = "\E[1;36m";
-
     LANG = "en_US.UTF-8";
     LC_ALL = "en_US.UTF-8";
+
+    MANPAGER="sh -c 'col -bx | bat -l man -p'";
+    MANROFFOPT="-c";
   };
 
   # Let Home Manager install and manage itself.
