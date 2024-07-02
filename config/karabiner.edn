@@ -27,6 +27,10 @@
          :rules [[:##caps_lock :left_command nil {:alone :escape}]]}
         {:des "Semi-colon when tapped, option when held"
          :rules [[:##semicolon :left_option nil {:alone :semicolon}]]}
+        {:des "Cmd + shift + 3 to take a fullscreen screenshot with flameshot"
+             :rules [[:!CS3 "/Applications/flameshot.app/Contents/MacOS/flameshot full"]]}
+        {:des "Cmd + shift + 4 to take a partial screenshot with flameshot"
+             :rules [[:!CS4 "/Applications/flameshot.app/Contents/MacOS/flameshot gui"]]}
         ; {:des "Custom app launching"
         ;         :rules [[:!Creturn_or_enter "open -a kitty"]
         ;                 [:!CSreturn_or_enter "open -n -a kitty --copy-env --args lf"]
