@@ -42,6 +42,8 @@
   home.sessionPath = [
     "$HOME/.local/bin"
     "$HOME/.config/emacs" # doom
+  ] ++ lib.optionals pkgs.stdenv.isDarwin [
+    "$HOME/Applications/flameshot.app/Contents/MacOS"
   ];
 
   home.sessionVariables = {
