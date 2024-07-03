@@ -73,11 +73,11 @@
   fonts.fontconfig.enable = true;
 
   xdg.configFile."nvim".source = ../nvim;
-  xdg.configFile."karabiner/karabiner.edn" = (lib.mkIf pkgs.stdenv.isDarwin {
-    source = ../config/karabiner.edn;
-  });
   xdg.configFile."aerospace/aerospace.toml" = (lib.mkIf pkgs.stdenv.isDarwin {
     source = ../config/aerospace.toml;
+  });
+  xdg.configFile."karabiner/karabiner.edn" = (lib.mkIf pkgs.stdenv.isDarwin {
+    source = ../config/karabiner.edn;
   });
 
   imports = [ ./fd.nix ./git.nix ./packages.nix ./programs.nix ];
