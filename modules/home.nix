@@ -76,6 +76,9 @@
   xdg.configFile."aerospace/aerospace.toml" = (lib.mkIf pkgs.stdenv.isDarwin {
     source = ../config/aerospace.toml;
   });
+  xdg.configFile."borders/bordersrc" = (lib.mkIf pkgs.stdenv.isDarwin {
+    source = ../config/bordersrc;
+  });
   xdg.configFile."karabiner/karabiner.edn" = (lib.mkIf pkgs.stdenv.isDarwin {
     source = ../config/karabiner.edn;
   });
