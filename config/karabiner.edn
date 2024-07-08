@@ -1,4 +1,4 @@
-{:simlayers {:layer-f {:key :f} :layer-j {:key :j} :layer-s {:key :s}}
+{:simlayers {:layer-f {:key :f} :layer-j {:key :j} :layer-s {:key :s} :layer-semi-colon {:key :semicolon}}
  :simlayer-threshold 300
  :main [{:des "layer j"
          :rules [:layer-j
@@ -23,10 +23,26 @@
                         [:d [:equal_sign :!Speriod]]
                         [:f [:!S9 :!S0 :spacebar :equal_sign :!Speriod :spacebar :!Sopen_bracket :!Sclose_bracket :left_arrow]]
                         ]}
+        ; TODO: make the layer automatically hold option when pressed
+        {:des "layer semi-colon"
+         :rules [:layer-semi-colon
+                 [:a :!O1]
+                 [:s :!O2]
+                 [:d :!O3]
+                 [:1 :!O1]
+                 [:2 :!O2]
+                 [:3 :!O3]
+                 [:4 :!O4]
+                 [:f :!Of]
+                 [:h :!Oh]
+                 [:j :!Oj]
+                 [:k :!Ok]
+                 [:l :!Ol]
+                 ]}
         {:des "Caps is escape when tapped, left command when held"
          :rules [[:##caps_lock :left_command nil {:alone :escape}]]}
-        {:des "Semi-colon when tapped, option when held"
-         :rules [[:##semicolon :left_option nil {:alone :semicolon}]]}
+        ; {:des "Semi-colon when tapped, option when held"
+        ;  :rules [[:##semicolon :left_option nil {:alone :semicolon}]]}
         {:des "Cmd + shift + 3 to take a fullscreen screenshot with flameshot"
              :rules [[:!CS3 "/Applications/flameshot.app/Contents/MacOS/flameshot full"]]}
         {:des "Cmd + shift + 4 to take a partial screenshot with flameshot"
