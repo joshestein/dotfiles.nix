@@ -4,7 +4,7 @@
          :rules [:layer-j
                  [:d :!S9] ;; jd insert (
                  [:f :!S0] ;; jf insert )
-                 [:x :open_bracket] ;; jc insert [
+                 [:x :open_bracket] ;; jx insert [
                  [:c :close_bracket] ;; jc insert ]
                  [:e :!Sopen_bracket] ;; je insert {
                  [:r :!Sclose_bracket] ;; jr insert }
