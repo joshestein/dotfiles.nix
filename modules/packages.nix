@@ -3,6 +3,7 @@
     pkgs.coreutils
     pkgs.curl
     pkgs.ffmpeg
+    pkgs.go
     pkgs.jq
     pkgs.lf
     pkgs.neovim
