@@ -39,6 +39,7 @@
                  [:j :!Oj]
                  [:k :!Ok]
                  [:l :!Ol]
+                 [:q :!Cq]
                  ]}
         {:des "Caps is escape when tapped, left command when held"
          :rules [[:##caps_lock :left_command nil {:alone :escape}]]}
