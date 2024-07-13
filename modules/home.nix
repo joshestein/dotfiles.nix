@@ -38,7 +38,10 @@
       "..." = "../..";
       "...." = "../../..";
       "....." = "../../../..";
-  };
+  } // lib.optionalAttrs pkgs.stdenv.isLinux {
+      pbcopy = "xclip -selection clipboard";
+      pbpaste = "xclip -selection clipboard -o";
+};
 
   home.sessionPath = [
     "$HOME/.local/bin"
