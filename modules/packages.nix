@@ -1,5 +1,7 @@
 { lib, pkgs, ... }: {
   home.packages = [
+    pkgs.aspell
+    pkgs.aspellDicts.en
     pkgs.coreutils
     pkgs.curl
     pkgs.ffmpeg
