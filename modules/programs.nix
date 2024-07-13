@@ -1,4 +1,9 @@
 {
+  programs.atuin = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   programs.bat = {
     enable = true;
     config.theme = "gruvbox-dark";
