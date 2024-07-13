@@ -6,14 +6,14 @@
   home.stateVersion = "24.05";
 
   home.shellAliases = {
-      cat = "bat";
+      cat = "lscat";
       hg = "history | grep";
       gcmsg = "git commit -m";
       gcm = "git commit -m";
       gca = "git commit --amend";
       gco = "git checkout";
       gpu = "git pull";
-      l = "eza --long --all --git --hyperlink";
+      l = "lscat";
       ll = "eza --long --git --hyperlink";
       lt = "eza --tree --hyperlink";
       md = "mkcdir";
