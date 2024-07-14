@@ -25,7 +25,10 @@
       sv = "sudoedit";
       yt = "yt-dlp";
       v = "nvim";
-      venv = "python -m venv .venv && source .venv/bin/activate";
+
+      # Python stuff
+      pip = "uv pip";
+      venv = "uv venv && source .venv/bin/activate";
 
       bc = "bc -ql";
       cp = "cp -iv";

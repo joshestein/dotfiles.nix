@@ -13,7 +13,9 @@
     pkgs.obsidian
     pkgs.spotify
     pkgs.ripgrep
+    pkgs.ruff
     pkgs.rustup
+    pkgs.uv
     pkgs.yt-dlp-light
     pkgs.vscode
     pkgs.volta
