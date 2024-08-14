@@ -1,0 +1,13 @@
+[manager]
+prepend_keymap = [
+  { on = ["d"], run = "yank --cut", desc = "Cut" },
+  { on = ["D"], run = "remove",     desc = "Delete" },
+  { on = ["i"], run = "rename",     desc = "Rename" },
+
+  { on = ["<C-f>"], run = "search rg",        desc = "File search" },
+  { on = ["<C-p>"], run = "cd --interactive", desc = "Dir search" },
+
+  # Plugins
+  { on = ["l"], run  = "plugin --sync smart-enter",  desc = "Enter the child directory, or open the file"},
+  { on = ["p"], run  = "plugin --sync smart-paste",  desc = "Paste into the hovered directory or CWD"},
+]

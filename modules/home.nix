@@ -79,6 +79,9 @@
   fonts.fontconfig.enable = true;
 
   xdg.configFile."nvim".source = ../nvim;
+  xdg.configFile."yazi".source = ../yazi;
+
+  # MacOS specific config
   xdg.configFile."aerospace/aerospace.toml" = (lib.mkIf pkgs.stdenv.isDarwin {
     source = ../config/aerospace.toml;
   });

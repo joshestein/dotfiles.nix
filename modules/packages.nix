@@ -7,7 +7,6 @@
     pkgs.ffmpeg
     pkgs.go
     pkgs.jq
-    pkgs.lf
     pkgs.neovim
     (pkgs.nerdfonts.override { fonts = [ "DroidSansMono" ]; })
     pkgs.obsidian
@@ -16,6 +15,7 @@
     pkgs.ruff
     pkgs.rustup
     pkgs.uv
+    pkgs.yazi
     pkgs.yt-dlp-light
     pkgs.vscode
     pkgs.volta
