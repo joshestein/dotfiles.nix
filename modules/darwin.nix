@@ -48,10 +48,6 @@
         name = "emacs-plus";
         args = [ "with-native-comp" ];
       }
-      {
-        name = "borders";
-        start_service = true;
-      }
     ];
 
     casks = [
@@ -66,7 +62,6 @@
       # This brew is leading to gcc native compilation errors
       # "jimeh/emacs-builds" # for emacs-app
       "d12frosted/emacs-plus" # for emacs-plus
-      "FelixKratz/formulae" # for borders (janky borders)
       "nikitabobko/tap" # for Aerospace
       "yqrashawn/goku"
     ];

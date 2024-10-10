@@ -1,3 +1,5 @@
+zmodload zsh/zprof
+
 setopt correct                                                  # Auto correct mistakes
 setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
 setopt nocaseglob                                               # Case insensitive globbing
@@ -53,6 +55,7 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
 bindkey '^F' fzf-file-widget

@@ -56,7 +56,34 @@ return {
             },
           },
         },
-        -- pickers = {}
+        pickers = {
+          current_buffer_fuzzy_find = { sorting_strategy = 'ascending' },
+          find_files = {
+            hidden = true,
+            find_command = {
+              'rg',
+              '--files',
+              '--follow',
+              '--color=never',
+              '--no-heading',
+              '--with-filename',
+              '--line-number',
+              '--column',
+              '--smart-case',
+              '--hidden',
+
+              -- Exclude some patterns from search
+              '--glob=!**/.git/*',
+              '--glob=!**/.idea/*',
+              '--glob=!**/.vscode/*',
+              '--glob=!**/node_modules/*',
+              '--glob=!**/build/*',
+              '--glob=!**/dist/*',
+              '--glob=!**/yarn.lock',
+              '--glob=!**/package-lock.json',
+            },
+          },
+        },
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
