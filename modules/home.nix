@@ -44,7 +44,7 @@
   } // lib.optionalAttrs pkgs.stdenv.isLinux {
       pbcopy = "xclip -selection clipboard";
       pbpaste = "xclip -selection clipboard -o";
-};
+  };
 
   home.sessionPath = [
     "$HOME/.local/bin"
@@ -79,19 +79,37 @@
 
   fonts.fontconfig.enable = true;
 
-  xdg.configFile."nvim".source = ../nvim;
-  xdg.configFile."yazi".source = ../yazi;
+  xdg.configFile = 
+    let
+      shared = [
+        "nvim"
+        "yazi"
+      ];
 
-  # MacOS specific config
-  xdg.configFile."aerospace/aerospace.toml" = (lib.mkIf pkgs.stdenv.isDarwin {
-    source = ../config/aerospace.toml;
-  });
-  xdg.configFile."borders/bordersrc" = (lib.mkIf pkgs.stdenv.isDarwin {
-    source = ../config/bordersrc;
-  });
-  xdg.configFile."karabiner/karabiner.edn" = (lib.mkIf pkgs.stdenv.isDarwin {
-    source = ../config/karabiner.edn;
-  });
+      darwin = [
+        "aerospace/aerospace.toml"
+        "karabiner/karabiner.edn"
+      ];
+
+      linux = [
+        "kmonad/dell-inspiron.kbd"
+      ];
+
+      mkFileSet = files: 
+        lib.attrsets.listToAttrs (map
+          (name: {
+            inherit name;
+            value = {
+              source = ../config/${name};
+              recursive = true;
+            };
+          })
+          files);
+
+    in
+      mkFileSet shared //
+      (lib.optionalAttrs pkgs.stdenv.isDarwin (mkFileSet darwin)) //
+      (lib.optionalAttrs pkgs.stdenv.isLinux (mkFileSet linux));
 
   imports = [ ./fd.nix ./git.nix ./packages.nix ./programs.nix ];
 }
