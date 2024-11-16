@@ -45,6 +45,7 @@
       ".matlab"
       ".moc"
       ".mozilla"
+      ".nix-profile"
       ".npm"
       ".processing"
       ".pub-cache"
