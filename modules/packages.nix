@@ -46,6 +46,7 @@
     pkgs.hunspellDicts.en_US-large
     pkgs.hunspellDicts.en_GB-large
     pkgs.libreoffice-qt
+    pkgs.kmonad
     pkgs.mesa
     pkgs.redshift
     pkgs.udiskie
