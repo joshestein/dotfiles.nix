@@ -4,8 +4,10 @@
     pkgs.aspellDicts.en
     pkgs.coreutils
     pkgs.curl
+    pkgs.fd
     pkgs.ffmpeg
     pkgs.go
+    pkgs.jetbrains-toolbox
     pkgs.jq
     pkgs.neovim
     (pkgs.nerdfonts.override { fonts = [ "DroidSansMono" ]; })
@@ -40,8 +42,15 @@
     pkgs.goku
   ] ++ lib.optionals pkgs.stdenv.isLinux [
     pkgs.firefox
+    pkgs.hunspell
+    pkgs.hunspellDicts.en_US-large
+    pkgs.hunspellDicts.en_GB-large
+    pkgs.libreoffice-qt
     pkgs.mesa
     pkgs.redshift
+    pkgs.udiskie
     pkgs.unzip
+    pkgs.vlc
+    pkgs.zathura
   ];
 }
