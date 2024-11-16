@@ -38,5 +38,10 @@
     pkgs.appcleaner
     pkgs.karabiner-elements
     pkgs.goku
+  ] ++ lib.optionals pkgs.stdenv.isLinux [
+    pkgs.firefox
+    pkgs.mesa
+    pkgs.redshift
+    pkgs.unzip
   ];
 }
