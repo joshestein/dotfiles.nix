@@ -6,6 +6,7 @@
     pkgs.curl
     pkgs.fd
     pkgs.ffmpeg
+    pkgs.git-credential-manager
     pkgs.go
     pkgs.jetbrains-toolbox
     pkgs.jq
