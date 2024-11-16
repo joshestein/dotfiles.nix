@@ -115,7 +115,7 @@ return {
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        ruff_lsp = {},
+        ruff = {},
         rust_analyzer = {
           settings = {
             ['rust-analyzer'] = {
@@ -143,7 +143,7 @@ return {
           },
         },
         eslint = {},
-        tsserver = {},
+        ts_ls = {},
 
         lua_ls = {
           -- cmd = {...},
