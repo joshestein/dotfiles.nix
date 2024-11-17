@@ -15,25 +15,51 @@
     };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }: {
-    darwinConfigurations."joshstein-mac" = nix-darwin.lib.darwinSystem {
-      modules = [
-        # The platform the configuration will be used on.
-        { nixpkgs.hostPlatform = "aarch64-darwin"; }
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }:
+    let
+      # Systems
+      darwinSystem = "aarch64-darwin";
+      linuxSystem = "x86_64-linux";
+      
+      # Make config based on system
+      mkConfig = system: rec {
+        username = if system == darwinSystem then "joshstein" else "josh";
+        homeDirPrefix = if system == darwinSystem then "/Users" else "/home";
+        homeDirectory = "${homeDirPrefix}/${username}";
+      };
 
-        ./modules/darwin.nix 
-        ./modules/unfree.nix
+      # Configs for each system
+      darwinConfig = mkConfig darwinSystem;
+      linuxConfig = mkConfig linuxSystem;
+    in
+    {
+      # MacOS
+      darwinConfigurations.${darwinConfig.username} = nix-darwin.lib.darwinSystem {
+        system = darwinSystem;
+        modules = [
+          # The platform the configuration will be used on.
+          { nixpkgs.hostPlatform = "aarch64-darwin"; }
+ 
+          ./modules/darwin.nix 
+          ./modules/unfree.nix
+ 
+          home-manager.darwinModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+ # h ome-manager.useUserPackages = true; # this BREAKS EVERYTHING SO SAD WHY
+            home-manager.users.${darwinConfig.username} = import ./modules/home.nix;
+          }
+        ];
+        specialArgs = darwinConfig // { inherit self; };
+      };
 
-        home-manager.darwinModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-# home-manager.useUserPackages = true; # this BREAKS EVERYTHING SO SAD WHY
-          home-manager.users.joshstein = import ./modules/home.nix;
-        }
-      ];
-      specialArgs = { inherit self; };
-    };
-
-    # Expose the package set, including overlays, for convenience.
-# darwinPackages = self.darwinConfigurations."joshstein-mac".pkgs;
+      # Linux (not NixOS)
+      homeConfigurations.${linuxConfig.username} = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${linuxSystem};
+        modules = [
+          ./modules/home.nix
+          ./modules/unfree.nix
+        ];
+        extraSpecialArgs = linuxConfig;
+      };
   };
 }

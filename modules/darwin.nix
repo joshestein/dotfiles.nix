@@ -1,7 +1,9 @@
-{ self, config, pkgs, ... }: {
-  users.users.joshstein = {
-    name = "joshstein";
-    home = "/Users/joshstein/";
+{ self, config, pkgs, username, homeDirectory, ... }:
+
+{
+  users.users.${username} = {
+    name = username;
+    home = homeDirectory;
     isHidden = false;
     shell = pkgs.zsh;
   };

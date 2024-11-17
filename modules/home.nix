@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, username, homeDirectory, ... }:
 
 {
+  home.username = username;
+  home.homeDirectory = homeDirectory;
+
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.stateVersion = "24.05";
