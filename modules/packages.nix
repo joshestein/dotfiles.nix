@@ -47,6 +47,7 @@
     pkgs.hunspellDicts.en_US-large
     pkgs.hunspellDicts.en_GB-large
     pkgs.libreoffice-qt
+    pkgs.libcanberra-gtk3 # needed for some GTK things (e.g. redshift-gtk)
     pkgs.kmonad
     pkgs.mesa
     pkgs.redshift
