@@ -87,12 +87,13 @@
       ];
 
       darwin = [
-        "aerospace/aerospace.toml"
-        "karabiner/karabiner.edn"
+        "aerospace"
+        "karabiner"
       ];
 
       linux = [
-        "kmonad/dell-inspiron.kbd"
+        "kmonad"
+        "redshift"
       ];
 
       mkFileSet = files: 
