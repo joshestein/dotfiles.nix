@@ -47,6 +47,9 @@
     pkgs.karabiner-elements
     pkgs.goku
   ] ++ lib.optionals pkgs.stdenv.isLinux [
+    pkgs.bluez
+    pkgs.bluez-tools
+    pkgs.blueman
     pkgs.firefox
     pkgs.hunspell
     pkgs.hunspellDicts.en_US-large
