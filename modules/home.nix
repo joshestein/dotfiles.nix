@@ -11,11 +11,6 @@
   home.shellAliases = {
       cat = "lscat";
       hg = "history | grep";
-      gcmsg = "git commit -m";
-      gcm = "git commit -m";
-      gca = "git commit --amend";
-      gco = "git checkout";
-      gpu = "git pull";
       l = "lscat";
       ll = "eza --long --git --hyperlink";
       lt = "eza --tree --hyperlink";
@@ -32,6 +27,21 @@
       # Python stuff
       pip = "uv pip";
       venv = "uv venv && source .venv/bin/activate";
+
+      # git
+      g = "git";
+      ga = "git add";
+      gaa = "git add all";
+      gcmsg = "git commit -m";
+      gcm = "git commit -m";
+      gca = "git commit --amend";
+      gco = "git checkout";
+      gf = "git fetch";
+      gp = "git push";
+      gpu = "git pull";
+      gst = "git status";
+      glog = "git log --oneline --decorate --graph";
+      gloga = "git log --oneline --decorate --graph --all";
 
       bc = "bc -ql";
       cp = "cp -iv";
