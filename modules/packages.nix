@@ -23,6 +23,7 @@
     pkgs.yt-dlp-light
     pkgs.vscode
     pkgs.volta
+    pkgs.zoom
 
     # LSP stuff
     # It is possible to install these manually, or with Mason, but having them here is easiest
@@ -51,6 +52,7 @@
     pkgs.libcanberra-gtk3 # needed for some GTK things (e.g. redshift-gtk)
     pkgs.kmonad
     pkgs.mesa
+    pkgs.pavucontrol
     pkgs.redshift
     pkgs.udiskie
     pkgs.unzip
