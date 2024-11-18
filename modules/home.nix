@@ -85,6 +85,7 @@
   xdg.configFile = 
     let
       shared = [
+        "doom"
         "nvim"
         "yazi"
       ];
