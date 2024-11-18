@@ -9,11 +9,13 @@
     pkgs.ffmpeg
     pkgs.git-credential-manager
     pkgs.go
+    pkgs.imagemagick
     pkgs.jetbrains-toolbox
     pkgs.jq
     pkgs.neovim
     (pkgs.nerdfonts.override { fonts = [ "DroidSansMono" ]; })
     pkgs.obsidian
+    pkgs.poppler # PDF preview
     pkgs.spotify
     pkgs.ripgrep
     pkgs.ruff
