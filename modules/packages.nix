@@ -8,6 +8,7 @@
     pkgs.fd
     pkgs.ffmpeg
     pkgs.git-credential-manager
+    pkgs.glow # Markdown preview
     pkgs.go
     pkgs.imagemagick
     pkgs.jetbrains-toolbox
