@@ -1,0 +1,4 @@
+set selection-clipboard clipboard
+map p print
+map [normal] <C-n> navigate next
+map [normal] <C-p> navigate previous

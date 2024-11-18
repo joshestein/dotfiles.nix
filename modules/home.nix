@@ -111,6 +111,7 @@
         "i3status"
         "kmonad"
         "redshift"
+        "zathura"
       ];
 
       mkFileSet = files: 
