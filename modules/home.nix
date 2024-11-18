@@ -96,6 +96,7 @@
       ];
 
       linux = [
+        "i3status"
         "kmonad"
         "redshift"
       ];
