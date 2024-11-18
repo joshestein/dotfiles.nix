@@ -22,8 +22,8 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec kitty
 
-# LF
-bindsym $mod+Ctrl+Return exec kitty -- lf-ueberzug
+# yazi
+bindsym $mod+Ctrl+Return exec kitty -- yazi
 
 # kill focused window
 bindsym $mod+q kill
