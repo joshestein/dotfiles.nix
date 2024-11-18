@@ -45,6 +45,8 @@
       ".matlab"
       ".moc"
       ".mozilla"
+      ".nix-channels"
+      ".nix-defexpr"
       ".nix-profile"
       ".npm"
       ".processing"
