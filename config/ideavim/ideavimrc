@@ -1,0 +1,114 @@
+set number
+set relativenumber
+set showcmd
+
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+" Ideavim actions
+nmap gc <Action>(GotoClass)
+nmap gd <Action>(GotoDeclaration)
+nmap gtd <Action>(GotoTypeDeclaration)
+nmap gi <Action>(GotoImplementation)
+nmap gr <Action>(FindUsages)
+nmap ge <Action>(GotoNextError)
+nmap gE <Action>(GotoPreviousError)
+nmap <leader>r <Action>(RenameElement)
+nmap <leader>b <Action>(ToggleLineBreakpoint)
+nmap <leader>e <Action>(ShowErrorDescription)
+nmap <leader>sv <Action>(SplitVertically)
+nmap <leader>sh <Action>(SplitHorizontally)
+nmap <leader>p <Action>(ActivateProjectToolWindow)
+nmap <leader>h <Action>(HideActiveWindow)
+nmap <C-o> <Action>(Back)
+nmap <C-i> <Action>(Forward)
+nmap <D-o> <Action>(Back)
+nmap <D-i> <Action>(Forward)
+
+nmap <leader>jr <Action>(JupyterRestartKernelAction)
+" d = debug
+nmap <leader>jd <Action>(JupyterDebugAction)
+" debug end
+nmap <leader>de <Action>(Stop)
+nmap <leader>ds <Action>(StepOver)
+nmap <leader>di <Action>(StepInto)
+nmap <leader>do <Action>(StepOut)
+nmap <leader>dr <Action>(Resume)
+
+nmap <leader><leader>r <Action>(Run)
+nmap <leader><leader>d <Action>(Debug)
+nmap <leader><leader>j <Action>(Rerun)
+nmap <leader><leader>s <Action>(Stop)
+
+" For some reason, 'Enter' is not working to correctly re-enter edit mode on
+" cells
+" Can also map `i` to 'Turn Edit Mode On' 
+nmap <leader><CR> <Action>(JupyterTurnEditModeOnAction)
+
+nnoremap Y y$
+inoremap jj <Esc>
+nnoremap <S-l> gt
+nnoremap <S-h> gT
+
+" Keep cursor centered when moving through results
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+nnoremap cn *``cgn
+nnoremap cN *``cgN
+
+set incsearch
+" Use leader-l to clear the highlighting of :set hlsearch.
+nnoremap <silent> <leader>l :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><leader>l
+
+set ignorecase
+set smartcase
+" Pressing `*` with smartcase on will be case sensitive
+" if the word has uppercase letters
+" nnoremap * /\<<C-R>=expand('<cword>')<CR>\><CR>
+" nnoremap # ?\<<C-R>=expand('<cword>')<CR>\><CR>
+"
+
+nnoremap B ^
+nnoremap E $
+nnoremap ^ <nop>
+nnoremap $ <nop>
+
+" Move between splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+nnoremap <D-d> <C-d>
+nnoremap <D-u> <C-u>
+
+" TODO: set handlers here
+" sethandler <C-f> a:ide
+
+" Leader paste to prevent yanking over-pasted into buffer
+xnoremap <leader>p "_dP
+
+" Go to mark
+nnoremap gm `
+
+" Only highlight quickscope on key presses
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
+" Idea specific
+set ideajoin
+set ideamarks
+set ideastatusicon=gray
+set idearefactormode=keep
+set clipboard+=unnamed
+" Also remap <C-\> to open terminal
+" And <C-n> for 'down' (unfortunately cannot get context aware <C-p> to go up
+" in menus).
+
+set commentary
+set highlightedyank
+set matchit
+set sneak
+set surround
+set quickscope

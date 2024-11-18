@@ -86,6 +86,7 @@
     let
       shared = [
         "doom"
+        "ideavim"
         "nvim"
         "yazi"
       ];
