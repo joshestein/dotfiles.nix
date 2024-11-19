@@ -65,6 +65,7 @@
     pkgs.udiskie
     pkgs.unzip
     pkgs.vlc
+    pkgs.xss-lock
     pkgs.zathura
   ];
 }

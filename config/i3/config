@@ -230,8 +230,9 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id thermald
 # exec --no-startup-id blueman-applet
-exec --no-startup-id xautolock -detectsleep -time 15 -locker blurlock
-exec_always --no-startup-id ff-theme-util
+
+exec xset 600
+exec --no-startup-id xss-lock -- blurlock &
 exec_always --no-startup-id fix_xcursor
 
 # Color palette used for the terminal ( ~/.Xresources file )
