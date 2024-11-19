@@ -48,6 +48,7 @@
     pkgs.karabiner-elements
     pkgs.goku
   ] ++ lib.optionals pkgs.stdenv.isLinux [
+    pkgs.acpilight
     pkgs.bluez
     pkgs.bluez-tools
     pkgs.blueman
