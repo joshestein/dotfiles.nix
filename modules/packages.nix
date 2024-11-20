@@ -61,7 +61,7 @@
     pkgs.kmonad
     pkgs.mesa
     pkgs.pavucontrol
-    pkgs.pulseaudio
+    pkgs.pulseaudioFull
     pkgs.redshift
     pkgs.udiskie
     pkgs.unzip
