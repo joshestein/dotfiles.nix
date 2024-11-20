@@ -10,6 +10,7 @@
     pkgs.git-credential-manager
     pkgs.glow # Markdown preview
     pkgs.go
+    pkgs.google-chrome
     pkgs.imagemagick
     pkgs.jetbrains-toolbox
     pkgs.jq
