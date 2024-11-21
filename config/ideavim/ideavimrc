@@ -84,11 +84,28 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <D-d> <C-d>
 nnoremap <D-u> <C-u>
 
-" TODO: set handlers here
-" sethandler <C-f> a:ide
+" In insert mode use C-n and C-p to go down and up (for autocomplete)
+inoremap <C-n> <down>
+inoremap <C-p> <up>
 
 " Leader paste to prevent yanking over-pasted into buffer
 xnoremap <leader>p "_dP
+
+" Also remap <C-\> to open terminal
+" And <C-n> for 'down' (unfortunately cannot get context aware <C-p> to go up
+" in menus).
+
+sethandler <C-d> a:vim
+sethandler <C-u> a:vim
+sethandler <C-i> a:vim
+sethandler <C-o> a:vim
+sethandler <C-f> a:ide " find
+sethandler <C-n> n-v:ide i:vim 
+sethandler <C-p> n-v:ide i:vim
+sethandler <C-v> a:ide " paste
+sethandler <C-w> a:ide " close tab
+sethandler <C-y> a:ide " remapped to 'enter'
+sethandler <C-\> a:ide " terminal
 
 " Go to mark
 nnoremap gm `
@@ -102,9 +119,6 @@ set ideamarks
 set ideastatusicon=gray
 set idearefactormode=keep
 set clipboard+=unnamed
-" Also remap <C-\> to open terminal
-" And <C-n> for 'down' (unfortunately cannot get context aware <C-p> to go up
-" in menus).
 
 set commentary
 set highlightedyank
