@@ -61,7 +61,9 @@
 
   home.sessionPath = [
     "$HOME/.local/bin"
-    "$HOME/.local/share/JetBrains/Toolbox/**/bin" # IDEs
+    "$HOME/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/"
+    "$HOME/.local/share/JetBrains/Toolbox/apps/pycharm-professional/bin/"
+    "$HOME/.local/share/JetBrains/Toolbox/apps/webstorm/bin/"
     "$HOME/.config/emacs/bin" # doom
     "$HOME/.volta/bin"
   ] ++ lib.optionals pkgs.stdenv.isDarwin [
