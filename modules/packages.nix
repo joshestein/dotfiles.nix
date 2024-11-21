@@ -2,7 +2,6 @@
   home.packages = [
     pkgs.aspell
     pkgs.aspellDicts.en
-    pkgs.calibre
     pkgs.coreutils
     pkgs.curl
     pkgs.ffmpeg
