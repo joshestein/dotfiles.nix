@@ -5,7 +5,6 @@
     pkgs.calibre
     pkgs.coreutils
     pkgs.curl
-    pkgs.fd
     pkgs.ffmpeg
     pkgs.git-credential-manager
     pkgs.glow # Markdown preview

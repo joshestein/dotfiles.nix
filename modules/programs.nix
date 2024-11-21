@@ -19,10 +19,11 @@
     enableZshIntegration = true;
     changeDirWidgetCommand = "fd --type d --hidden --follow";
     defaultCommand = "fd --hidden --follow";
+    fileWidgetCommand = "fd --hidden --follow";
   };
 
   programs.kitty = {
-    enable = true;
+    enable = false;
     extraConfig = builtins.readFile ../config/kitty/kitty.conf;
     shellIntegration = { enableZshIntegration = true; };
     themeFile = "gruvbox-dark";

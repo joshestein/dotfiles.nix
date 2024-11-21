@@ -56,8 +56,8 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
-bindkey '^F' fzf-file-widget
+bindkey '^F' fzf-cd-widget
 bindkey '^P' fzf-file-widget
-bindkey '^[[102;9u' fzf-file-widget
+bindkey '^[[102;9u' fzf-cd-widget
 bindkey '^[[112;9u' fzf-file-widget
 

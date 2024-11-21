@@ -3,7 +3,6 @@
     enable = true;
     ignores = [
       "Android"
-      "*cache*"
       "chrome-data"
       "go"
       "google-chrome"
@@ -23,7 +22,7 @@
       "unityhub"
       "Zotero"
       ".android"
-      ".cache"
+      "**/.cache/**"
       ".cargo"
       ".cert"
       ".cmake"
@@ -40,7 +39,7 @@
       ".ipython"
       ".java"
       ".jupyter"
-      ".local"
+      "**/.local/**"
       ".m2"
       ".matlab"
       ".moc"
@@ -64,6 +63,7 @@
       ".venv"
       ".vim/plugged"
       ".vnc"
+      ".volta"
       ".vscode"
       ".vscode-ignore"
       ".vscode-oss"
