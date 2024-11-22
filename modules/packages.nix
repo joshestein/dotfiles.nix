@@ -10,7 +10,6 @@
     pkgs.go
     pkgs.google-chrome
     pkgs.imagemagick
-    pkgs.jetbrains-toolbox
     pkgs.jq
     pkgs.neovim
     (pkgs.nerdfonts.override { fonts = [ "DroidSansMono" ]; })
@@ -55,6 +54,7 @@
     pkgs.hunspell
     pkgs.hunspellDicts.en_US-large
     pkgs.hunspellDicts.en_GB-large
+    pkgs.jetbrains-toolbox
     pkgs.libreoffice-qt
     pkgs.libcanberra-gtk3 # needed for some GTK things (e.g. redshift-gtk)
     pkgs.kmonad
