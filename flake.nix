@@ -34,7 +34,7 @@
     in
     {
       # MacOS
-      darwinConfigurations.${darwinConfig.username} = nix-darwin.lib.darwinSystem {
+      darwinConfigurations."joshstein-mac" = nix-darwin.lib.darwinSystem {
         system = darwinSystem;
         modules = [
           # The platform the configuration will be used on.
