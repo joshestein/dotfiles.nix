@@ -47,9 +47,10 @@
             home-manager.useGlobalPkgs = true;
  # h ome-manager.useUserPackages = true; # this BREAKS EVERYTHING SO SAD WHY
             home-manager.users.${darwinConfig.username} = import ./modules/home.nix;
+            home-manager.extraSpecialArgs = darwinConfig;
           }
         ];
-        specialArgs = darwinConfig // { inherit self; };
+        specialArgs = { inherit self; } // darwinConfig;
       };
 
       # Linux (not NixOS)
