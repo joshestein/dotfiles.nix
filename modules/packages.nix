@@ -25,7 +25,7 @@
     pkgs.yt-dlp-light
     pkgs.vscode
     pkgs.volta
-    pkgs.zoom
+    pkgs.zoom-us
 
     # LSP stuff
     # It is possible to install these manually, or with Mason, but having them here is easiest
