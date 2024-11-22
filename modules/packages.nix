@@ -15,6 +15,7 @@
     (pkgs.nerdfonts.override { fonts = [ "DroidSansMono" ]; })
     pkgs.obsidian
     pkgs.poppler # PDF preview
+    pkgs.shellcheck
     pkgs.signal-desktop
     pkgs.spotify
     pkgs.ripgrep
