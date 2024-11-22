@@ -6,7 +6,9 @@
       "jetbrains-toolbox"
       "obsidian"
       "raycast"
+      "signal-desktop"
       "spotify"
       "vscode"
+      "zoom"
     ];
 }
