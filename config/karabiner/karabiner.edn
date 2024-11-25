@@ -1,4 +1,4 @@
-{:simlayers {:layer-f {:key :f} :layer-j {:key :j} :layer-s {:key :s} :layer-semi-colon {:key :semicolon}}
+{:simlayers {:layer-f {:key :f} :layer-j {:key :j} :layer-s {:key :s} :layer-semi-colon {:key :semicolon} :layer-space {:key :spacebar} :layer-d {:key :d}}
  :simlayer-threshold 300
  :main [{:des "layer j"
          :rules [:layer-j
@@ -11,8 +11,8 @@
                  ]}
         {:des "layer f"
          :rules [:layer-f
-                 [:j :semicolon] ;; fj insert ;
-                 [:k :!Ssemicolon] ;; fk insert :
+                 [:j :!S1] ;; fj insert !
+                 [:k :equal_sign] ;; fk insert =
                  [:l :!S7] ;; fl insert &
                  [:semicolon :!Sbackslash] ;; f; insert |
                  [:m :!S1] ;; fm insert !
@@ -22,6 +22,13 @@
                 :rules [:layer-s
                         [:d [:equal_sign :!Speriod]]
                         [:f [:!S9 :!S0 :spacebar :equal_sign :!Speriod :spacebar :!Sopen_bracket :!Sclose_bracket :left_arrow]]
+                        ]}
+        {:des "layer d"
+                :rules [:layer-d
+                        [:j :!Sequal_sign]
+                        [:k :hyphen]
+                        [:l :!S8]
+                        [:semicolon :slash]
                         ]}
         ; TODO: make the layer automatically hold option when pressed
         {:des "layer semi-colon"
