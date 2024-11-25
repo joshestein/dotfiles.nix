@@ -25,6 +25,9 @@ vim.keymap.set('n', '<leader>hs', '<cmd>split<CR>', { desc = 'Open new horizonta
 
 -- Make cmd-backspace delete the last word
 vim.keymap.set('i', '<D-BS>', '<C-w>')
+-- Make option-backspace delete the last word
+vim.g.neovide_input_macos_alt_is_meta = true
+vim.keymap.set('i', '<M-BS>', '<C-w>')
 
 -- Terminal hotkey
 vim.keymap.set('n', '<C-\\>', '<cmd>tab terminal<CR>')
