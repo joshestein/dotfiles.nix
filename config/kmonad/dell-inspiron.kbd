@@ -11,6 +11,7 @@
   f (tap-hold-next-release 150 f (layer-toggle symbols))
   j (tap-hold-next-release 150 j (layer-toggle symbols))
   ; (tap-hold-next-release 150 ; (layer-toggle i3))
+  spc (tap-hold-next-release 150 spc (layer-toggle space))
 )
 
 (defsrc
@@ -28,7 +29,7 @@
   tab     q       w       e       r       t       y       u       i       o       p       [       ]       \
   @caps   a       s       @d      @f      g       h       @j      k       l       @;      '       ret
   lsft    z       x       c       v       b       n       m       ,       .       /       rsft
-  lctl            lmet    lalt    spc                             ralt    rctrl           left    up      down    rght
+  lctl            lmet    lalt    @spc                            ralt    rctrl           left    up      down    rght
 )
 
 (deflayer symbols
@@ -58,3 +59,11 @@
   _            _      _      _                           _      _            _     _     _    _
 )
 
+(deflayer space
+  _     _      _      _      _      _      _      _      _      _      _     _     _     _    _     _
+  _     _      _      _      _      _      _      _      _      _      _     _     _     _
+  _     _      _      _      _      _      _      _      _      _      Up    _     _     _
+  _     _      _      _      _      _      _      Down   Up     _      _     _     _
+  _     _      _      _      _      _      Down   _      _      _      _     _
+  _            _      _      _                           _      _            _     _     _    _
+)
