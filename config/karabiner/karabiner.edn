@@ -51,7 +51,10 @@
         {:des "layer space"
           :rules [:layer-space
                   [:n :down_arrow]
-                  [:p :up_arrow]]}
+                  [:p :up_arrow]
+                  [:j :down_arrow]
+                  [:k :up_arrow]
+                  ]}
         {:des "Caps is escape when tapped, left command when held"
          :rules [[:##caps_lock :left_command nil {:alone :escape}]]}
         ; {:des "Semi-colon when tapped, option when held"
