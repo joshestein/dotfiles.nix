@@ -1,13 +1,23 @@
-{:simlayers {:layer-f {:key :f} :layer-j {:key :j} :layer-s {:key :s} :layer-semi-colon {:key :semicolon} :layer-space {:key :spacebar} :layer-d {:key :d}}
+{:simlayers {
+  :layer-f {:key :f}
+  :layer-d {:key :d}
+  :layer-s {:key :s}
+  :layer-j {:key :j}
+  :layer-semi-colon {:key :semicolon}
+  :layer-space {:key :spacebar}
+  }
  :simlayer-threshold 300
  :main [{:des "layer j"
          :rules [:layer-j
+                 [:a :!S5] ;; js -> %
+                 [:s :!S4] ;; js -> $
                  [:d :!S9] ;; jd insert (
                  [:f :!S0] ;; jf insert )
                  [:x :!Sopen_bracket] ;; jx insert {
                  [:c :!Sclose_bracket] ;; jc insert }
                  [:e :open_bracket] ;; je insert [
                  [:r :close_bracket] ;; jr insert ]
+                 [:w :!S2] ;; jw -> @
                  ]}
         {:des "layer f"
          :rules [:layer-f
@@ -15,14 +25,16 @@
                  [:k :equal_sign] ;; fk insert =
                  [:l :!S7] ;; fl insert &
                  [:semicolon :!Sbackslash] ;; f; insert |
-                 [:m :!S1] ;; fm insert !
-                 [:comma :equal_sign] ;; f, insert =
+                 [:u :!S4] ;; fu -> $
+                 [:i :!S5] ;; fi -> %
                  ]}
         {:des "layer s"
-                :rules [:layer-s
-                        [:d [:equal_sign :!Speriod]]
-                        [:f [:!S9 :!S0 :spacebar :equal_sign :!Speriod :spacebar :!Sopen_bracket :!Sclose_bracket :left_arrow]]
-                        ]}
+          :rules [:layer-s
+                  [:d [:equal_sign :!Speriod]]
+                  [:f [:!S9 :!S0 :spacebar :equal_sign :!Speriod :spacebar :!Sopen_bracket :!Sclose_bracket :left_arrow]]
+                  [:x :!Scomma] ;; sx -> <
+                  [:c :!Speriod] ;; sx -> <
+                  ]}
         {:des "layer d"
           :rules [:layer-d
                   [:j :!Sequal_sign]
