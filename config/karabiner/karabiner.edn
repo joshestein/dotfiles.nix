@@ -24,12 +24,12 @@
                         [:f [:!S9 :!S0 :spacebar :equal_sign :!Speriod :spacebar :!Sopen_bracket :!Sclose_bracket :left_arrow]]
                         ]}
         {:des "layer d"
-                :rules [:layer-d
-                        [:j :!Sequal_sign]
-                        [:k :hyphen]
-                        [:l :!S8]
-                        [:semicolon :slash]
-                        ]}
+          :rules [:layer-d
+                  [:j :!Sequal_sign]
+                  [:k :hyphen]
+                  [:l :!S8]
+                  [:semicolon :slash]
+                  ]}
         ; TODO: make the layer automatically hold option when pressed
         {:des "layer semi-colon"
          :rules [:layer-semi-colon
