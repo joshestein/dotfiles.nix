@@ -66,6 +66,8 @@
                   [:p :up_arrow]
                   [:j :down_arrow]
                   [:k :up_arrow]
+                  [:h :left_arrow]
+                  [:l :right_arrow]
                   ]}
         {:des "Caps is escape when tapped, left command when held"
          :rules [[:##caps_lock :left_command nil {:alone :escape}]]}
