@@ -95,6 +95,24 @@
 
   fonts.fontconfig.enable = true;
 
+  systemd.user.services.pulseaudio = {
+    Unit = {
+      Description = "PulseAudio Sound System";
+      Documentation = "man:pulseaudio(1)";
+      After = [ "sound.target" ];
+    };
+
+    Service = {
+      Type = "notify";
+      ExecStart = "${pkgs.pulseaudioFull}/bin/pulseaudio";
+      Restart = "always";
+    };
+
+    Install = {
+      WantedBy = [ "default.target" ];
+    };
+  };
+
   xdg.configFile = 
     let
       shared = [
