@@ -62,6 +62,7 @@
     pkgs.mesa
     pkgs.pavucontrol
     pkgs.pulseaudioFull
+    pkgs.playerctl
     pkgs.redshift
     pkgs.udiskie
     pkgs.unzip
