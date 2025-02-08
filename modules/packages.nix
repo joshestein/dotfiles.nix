@@ -33,6 +33,7 @@
     pkgs.black
     pkgs.isort
     pkgs.prettierd
+    pkgs.pyright
     pkgs.typescript
 
     # pyenv dependencies
