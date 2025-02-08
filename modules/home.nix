@@ -64,6 +64,7 @@
     "$HOME/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/"
     "$HOME/.local/share/JetBrains/Toolbox/apps/pycharm-professional/bin/"
     "$HOME/.local/share/JetBrains/Toolbox/apps/webstorm/bin/"
+    "$HOME/.local/share/nvim/mason/bin/" # All the LSPs live here
     "$HOME/.config/emacs/bin" # doom
     "$HOME/.volta/bin"
   ] ++ lib.optionals pkgs.stdenv.isDarwin [
