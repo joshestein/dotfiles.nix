@@ -95,21 +95,38 @@
 
   fonts.fontconfig.enable = true;
 
-  systemd.user.services.pulseaudio = {
-    Unit = {
-      Description = "PulseAudio Sound System";
-      Documentation = "man:pulseaudio(1)";
-      After = [ "sound.target" ];
+  systemd.user.services = lib.mkIf (pkgs.stdenv.isLinux) {
+    pulseaudio = {
+      Unit = {
+        Description = "PulseAudio Sound System";
+        Documentation = "man:pulseaudio(1)";
+        After = [ "sound.target" ];
+      };
+
+      Service = {
+        Type = "notify";
+        ExecStart = "${pkgs.pulseaudioFull}/bin/pulseaudio";
+        Restart = "always";
+      };
+
+      Install = {
+        WantedBy = [ "default.target" ];
+      };
     };
 
-    Service = {
-      Type = "notify";
-      ExecStart = "${pkgs.pulseaudioFull}/bin/pulseaudio";
-      Restart = "always";
-    };
+    playerctld = {
+      Unit = {
+        Description = "Keep track of media player activity";
+      };
 
-    Install = {
-      WantedBy = [ "default.target" ];
+      Service = {
+        Type = "oneshot";
+        ExecStart = "${pkgs.playerctl}/bin/playerctld daemon";
+      };
+
+      Install = {
+        WantedBy = [ "default.target" ];
+      };
     };
   };
 
