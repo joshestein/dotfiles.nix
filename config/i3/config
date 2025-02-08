@@ -14,7 +14,7 @@ hide_edge_borders none
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:DroidSansMNerdFontMono-Regular 11
+font pango:Atkinson Hyperlegible Regular 14
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -123,9 +123,9 @@ bindsym $mod+Shift+minus scratchpad show
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1:1:
-set $ws2 2:2:
-set $ws3 3:3:
+set $ws1 1:1 : 
+set $ws2 2:2 : 
+set $ws3 3:3 : 
 set $ws4 4
 set $ws5 5
 set $ws6 6
@@ -286,7 +286,7 @@ bar {
 
 	bindsym button4 nop
 	bindsym button5 nop
-        font pango:DroidSansMNerdFontMono-Regular 11
+        font pango:Atkinson Hyperlegible Regular 12
 	strip_workspace_numbers yes
 
     colors {
