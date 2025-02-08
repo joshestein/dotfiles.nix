@@ -23,8 +23,10 @@ vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = 'Go to [N]ext buffe
 vim.keymap.set('n', '<leader>vs', '<cmd>vsplit<CR>', { desc = 'Open new vertical split' })
 vim.keymap.set('n', '<leader>hs', '<cmd>split<CR>', { desc = 'Open new horizontal split' })
 
--- Make cmd-backspace delete the last word
+-- Make ctrl/cmd-backspace delete the last word
+vim.keymap.set('i', '<C-BS>', '<C-w>')
 vim.keymap.set('i', '<D-BS>', '<C-w>')
+
 -- Make option-backspace delete the last word
 vim.g.neovide_input_macos_alt_is_meta = true
 vim.keymap.set('i', '<M-BS>', '<C-w>')
