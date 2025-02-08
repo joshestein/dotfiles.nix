@@ -135,6 +135,7 @@
       shared = [
         "doom"
         "ideavim"
+        "kitty"
         "nvim"
         "yazi"
       ];

@@ -24,9 +24,7 @@
 
   programs.kitty = {
     enable = false;
-    extraConfig = builtins.readFile ../config/kitty/kitty.conf;
     shellIntegration = { enableZshIntegration = true; };
-    themeFile = "gruvbox-dark";
   };
 
   programs.pyenv = {
