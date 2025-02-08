@@ -17,13 +17,18 @@ return {
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
-        python = { 'ruff_fix', 'ruff_format' },
+        python = { 'black', 'ruff_fix', 'ruff_format' },
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
         javascript = { { 'prettierd', 'prettier' } },
         typescript = { { 'prettierd', 'prettier' } },
         html = { { 'prettierd', 'prettier' } },
+      },
+      formatters = {
+        black = {
+          args = { '--line-length', '120' },
+        },
       },
     },
   },
