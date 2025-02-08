@@ -15,17 +15,17 @@
     (pkgs.nerdfonts.override { fonts = [ "DroidSansMono" ]; })
     pkgs.obsidian
     pkgs.poppler # PDF preview
+    pkgs.ripgrep
+    pkgs.rustup
     pkgs.shellcheck
     pkgs.signal-desktop
     pkgs.spotify
-    pkgs.ripgrep
-    pkgs.rustup
-    pkgs.uv
     pkgs.typescript
+    pkgs.uv
+    pkgs.volta
+    pkgs.vscode
     pkgs.yazi
     pkgs.yt-dlp-light
-    pkgs.vscode
-    pkgs.volta
     # pkgs.zoom-us
 
     # pyenv dependencies
