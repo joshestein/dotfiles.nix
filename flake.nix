@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
@@ -15,7 +16,7 @@
     };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nixpkgs-unstable, home-manager }:
     let
       # Systems
       darwinSystem = "aarch64-darwin";
@@ -31,6 +32,10 @@
       # Configs for each system
       darwinConfig = mkConfig darwinSystem;
       linuxConfig = mkConfig linuxSystem;
+
+      overlay-unstable = final: prev: {
+        unstable = nixpkgs-unstable.legacyPackages.${prev.system};
+      };
     in
     {
       # MacOS
@@ -39,6 +44,7 @@
         modules = [
           # The platform the configuration will be used on.
           { nixpkgs.hostPlatform = darwinSystem; }
+          { nixpkgs.overlays = [ overlay-unstable ]; }
  
           ./modules/darwin.nix 
           ./modules/unfree.nix
@@ -57,6 +63,7 @@
       homeConfigurations.${linuxConfig.username} = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${linuxSystem};
         modules = [
+          { nixpkgs.overlays = [ overlay-unstable ]; }
           ./modules/home.nix
           ./modules/unfree.nix
         ];

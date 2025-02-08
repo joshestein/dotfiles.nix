@@ -11,7 +11,7 @@
     pkgs.google-chrome
     pkgs.imagemagick
     pkgs.jq
-    pkgs.neovim
+    pkgs.unstable.neovim
     (pkgs.nerdfonts.override { fonts = [ "DroidSansMono" ]; })
     pkgs.obsidian
     pkgs.poppler # PDF preview
