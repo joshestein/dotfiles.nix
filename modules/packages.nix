@@ -24,7 +24,7 @@
     pkgs.uv
     pkgs.volta
     pkgs.vscode
-    pkgs.yazi
+    pkgs.unstable.yazi
     pkgs.yt-dlp-light
     # pkgs.zoom-us
 
