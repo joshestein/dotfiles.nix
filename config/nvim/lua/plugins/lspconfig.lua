@@ -114,8 +114,9 @@ return {
 
       local servers = {
         -- clangd = {},
-        -- gopls = {},
+        pyright = {},
         ruff = {},
+        gopls = {},
         rust_analyzer = {
           settings = {
             ['rust-analyzer'] = {
@@ -167,6 +168,9 @@ return {
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
+        'black',
+        'isort',
+        'prettierd',
         'stylua', -- Used to format Lua code
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }

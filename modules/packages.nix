@@ -19,22 +19,14 @@
     pkgs.signal-desktop
     pkgs.spotify
     pkgs.ripgrep
-    pkgs.ruff
     pkgs.rustup
     pkgs.uv
+    pkgs.typescript
     pkgs.yazi
     pkgs.yt-dlp-light
     pkgs.vscode
     pkgs.volta
     # pkgs.zoom-us
-
-    # LSP stuff
-    # It is possible to install these manually, or with Mason, but having them here is easiest
-    pkgs.black
-    pkgs.isort
-    pkgs.prettierd
-    pkgs.pyright
-    pkgs.typescript
 
     # pyenv dependencies
     pkgs.openssl_3_3
