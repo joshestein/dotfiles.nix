@@ -99,10 +99,10 @@ sethandler <C-d> a:vim
 sethandler <C-u> a:vim
 sethandler <C-i> a:vim
 sethandler <C-o> a:vim
+sethandler <C-v> a:vim
 sethandler <C-f> a:ide " find
 sethandler <C-n> n-v:ide i:vim 
 sethandler <C-p> n-v:ide i:vim
-sethandler <C-v> a:ide " paste
 sethandler <C-w> a:ide " close tab
 sethandler <C-y> a:ide " remapped to 'enter'
 sethandler <C-\> a:ide " terminal
