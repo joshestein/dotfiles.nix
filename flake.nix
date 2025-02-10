@@ -65,6 +65,7 @@
         modules = [
           { nixpkgs.overlays = [ overlay-unstable ]; }
           ./modules/home.nix
+          ./modules/home-linux.nix
           ./modules/unfree.nix
         ];
         extraSpecialArgs = linuxConfig;
