@@ -23,8 +23,9 @@
   };
 
   programs.kitty = {
-    enable = false;
+    enable = true;
     shellIntegration = { enableZshIntegration = true; };
+    themeFile = "gruvbox-dark";
   };
 
   programs.pyenv = {
