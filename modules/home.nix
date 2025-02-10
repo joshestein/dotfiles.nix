@@ -96,6 +96,11 @@
 
   fonts.fontconfig.enable = true;
 
+  home.file.".local/bin/volume-control.sh" = lib.mkIf (pkgs.stdenv.isLinux) {
+    source = ../scripts/volume-control.sh;
+    executable = true;
+  };
+
   systemd.user.services = lib.mkIf (pkgs.stdenv.isLinux) {
     pulseaudio = {
       Unit = {
