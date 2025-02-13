@@ -23,7 +23,7 @@
   };
 
   programs.kitty = {
-    enable = true;
+    enable = false;
     shellIntegration = { enableZshIntegration = true; };
     themeFile = "gruvbox-dark";
   };
