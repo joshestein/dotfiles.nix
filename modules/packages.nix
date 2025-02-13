@@ -11,11 +11,13 @@
     pkgs.google-chrome
     pkgs.imagemagick
     pkgs.jq
+    pkgs.mosh
     pkgs.unstable.neovim
     (pkgs.nerdfonts.override { fonts = [ "DroidSansMono" ]; })
     pkgs.obsidian
     pkgs.poppler # PDF preview
     pkgs.ripgrep
+    pkgs.rsync
     pkgs.rustup
     pkgs.shellcheck
     pkgs.signal-desktop
