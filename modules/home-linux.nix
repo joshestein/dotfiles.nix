@@ -2,9 +2,11 @@
 { config, lib, pkgs, ... }:
 
 {
-  home.file.".local/bin/volume-control.sh" = {
-    source = ../scripts/volume-control.sh;
-    executable = true;
+  home.file = {
+    ".local/bin" = {
+      source = ../scripts;
+      recursive = true;
+    };
   };
 
   systemd.user.services = {
