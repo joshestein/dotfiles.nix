@@ -18,13 +18,14 @@
       nb = "npm run build";
       ni = "npm install";
       ns = "npm start";
-      p = "python";
       s = "kitten ssh";
       sv = "sudoedit";
       yt = "yt-dlp";
       v = "nvim";
 
       # Python stuff
+      activate = "source .venv/bin/activate";
+      p = "python";
       pip = "uv pip";
       venv = "uv venv && source .venv/bin/activate";
 
