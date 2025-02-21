@@ -103,6 +103,7 @@
         "ideavim"
         "kitty"
         "nvim"
+        "shell"
         "yazi"
       ];
 
