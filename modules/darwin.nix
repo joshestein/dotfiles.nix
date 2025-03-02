@@ -61,6 +61,7 @@
       "keycastr"
       "raycast"
       "vlc"
+      "zed"
     ];
     taps = [
       # This brew is leading to gcc native compilation errors
