@@ -50,8 +50,7 @@
     brews = [
       "goku"
       {
-        name = "emacs-plus";
-        args = [ "with-native-comp" ];
+        name = "emacs-plus@30";
       }
     ];
 
