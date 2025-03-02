@@ -49,13 +49,13 @@
 
     brews = [
       "goku"
-      {
-        name = "emacs-plus@30";
-      }
+      # {
+      #   name = "emacs-plus@30";
+      # }
     ];
 
     casks = [
-      # "emacs-app"
+      "emacs-app"
       "aerospace"
       "firefox"
       "keycastr"
@@ -65,8 +65,8 @@
     ];
     taps = [
       # This brew is leading to gcc native compilation errors
-      # "jimeh/emacs-builds" # for emacs-app
-      "d12frosted/emacs-plus" # for emacs-plus
+      "jimeh/emacs-builds" # for emacs-app
+      # "d12frosted/emacs-plus" # for emacs-plus
       "nikitabobko/tap" # for Aerospace
       "yqrashawn/goku"
     ];
