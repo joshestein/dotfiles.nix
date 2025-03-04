@@ -118,7 +118,7 @@ set ideajoin
 set ideamarks
 set ideastatusicon=gray
 set idearefactormode=keep
-set clipboard^=ideaput
+set clipboard^=unnamedplus
 
 set commentary
 set highlightedyank
