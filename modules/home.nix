@@ -67,6 +67,7 @@
     "$HOME/.local/share/JetBrains/Toolbox/apps/webstorm/bin/"
     "$HOME/.local/share/nvim/mason/bin/" # All the LSPs live here
     "$HOME/.config/emacs/bin" # doom
+    "$HOME/.emacs.d/bin" # doom
     "$HOME/.volta/bin"
   ] ++ lib.optionals pkgs.stdenv.isDarwin [
     "$HOME/Applications/flameshot.app/Contents/MacOS"
