@@ -21,6 +21,7 @@
     pkgs.rustup
     pkgs.shellcheck
     pkgs.signal-desktop
+    pkgs.slack
     pkgs.spotify
     pkgs.typescript
     pkgs.uv

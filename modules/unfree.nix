@@ -7,6 +7,7 @@
       "obsidian"
       "raycast"
       "signal-desktop"
+      "slack"
       "spotify"
       "vscode"
       "zoom"
