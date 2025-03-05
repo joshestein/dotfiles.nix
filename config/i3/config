@@ -286,7 +286,7 @@ bar {
 
 	bindsym button4 nop
 	bindsym button5 nop
-        font pango:AtkynsonMono Regular 12
+        font pango:Atkinson Hyperlegible Regular 12
 	strip_workspace_numbers yes
 
     colors {
