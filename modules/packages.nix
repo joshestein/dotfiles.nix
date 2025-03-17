@@ -48,6 +48,7 @@
     pkgs.bluez-tools
     pkgs.blueman
     pkgs.firefox
+    pkgs.flameshot
     pkgs.hunspell
     pkgs.hunspellDicts.en_US-large
     pkgs.hunspellDicts.en_GB-large
