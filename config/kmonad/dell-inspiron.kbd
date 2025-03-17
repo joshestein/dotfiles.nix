@@ -7,11 +7,11 @@
 
 (defalias
   caps (tap-next esc lctl)
-  d (tap-hold-next-release 150 d (layer-toggle arithmetic))
-  f (tap-hold-next-release 150 f (layer-toggle symbols))
-  j (tap-hold-next-release 150 j (layer-toggle symbols))
-  ; (tap-hold-next-release 150 ; (layer-toggle i3))
-  spc (tap-hold-next-release 150 spc (layer-toggle space))
+  d (tap-hold-next-release 110 d (layer-toggle arithmetic))
+  f (tap-hold-next-release 110 f (layer-toggle symbols))
+  j (tap-hold-next-release 110 j (layer-toggle symbols))
+  ; (tap-hold-next-release 110 ; (layer-toggle i3))
+  spc (tap-hold-next-release 110 spc (layer-toggle space))
 )
 
 (defsrc
