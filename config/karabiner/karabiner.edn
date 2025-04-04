@@ -6,7 +6,7 @@
   :layer-semi-colon {:key :semicolon}
   :layer-space {:key :spacebar}
   }
- :simlayer-threshold 300
+ :simlayer-threshold 130
  :main [{:des "layer j"
          :rules [:layer-j
                  [:a :!S5] ;; js -> %
