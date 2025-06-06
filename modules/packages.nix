@@ -35,11 +35,12 @@
     pkgs.openssl_3_3
     pkgs.readline
     pkgs.sqlite
+    pkgs.xh
     pkgs.xz
     pkgs.zlib
     pkgs.tcl
   ] ++ lib.optionals pkgs.stdenv.isDarwin [
-    pkgs.appcleaner
+    # pkgs.appcleaner
       # pkgs.karabiner-elements
     pkgs.goku
   ] ++ lib.optionals pkgs.stdenv.isLinux [
