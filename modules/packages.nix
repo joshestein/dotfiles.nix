@@ -12,6 +12,7 @@
     pkgs.imagemagick
     pkgs.jq
     pkgs.mosh
+    pkgs.ncspot # Spotify client
     pkgs.unstable.neovim
     (pkgs.nerdfonts.override { fonts = [ "DroidSansMono" ]; })
     pkgs.obsidian
