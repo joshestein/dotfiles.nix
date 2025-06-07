@@ -6,7 +6,7 @@
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
 
   home.shellAliases = {
       cat = "lscat";

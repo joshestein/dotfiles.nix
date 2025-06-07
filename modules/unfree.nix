@@ -6,7 +6,7 @@
       "jetbrains-toolbox"
       "obsidian"
       "raycast"
-      "signal-desktop"
+      "signal-desktop-bin"
       "slack"
       "spotify"
       "vscode"

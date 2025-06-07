@@ -14,14 +14,15 @@
     pkgs.mosh
     pkgs.ncspot # Spotify client
     pkgs.unstable.neovim
-    (pkgs.nerdfonts.override { fonts = [ "DroidSansMono" ]; })
+    pkgs.nerd-fonts.atkynson-mono
+    pkgs.nerd-fonts.droid-sans-mono
     pkgs.obsidian
     pkgs.poppler # PDF preview
     pkgs.ripgrep
     pkgs.rsync
     pkgs.rustup
     pkgs.shellcheck
-    pkgs.signal-desktop
+    pkgs.signal-desktop-bin
     pkgs.slack
     pkgs.spotify
     pkgs.typescript
@@ -33,7 +34,7 @@
     # pkgs.zoom-us
 
     # pyenv dependencies
-    pkgs.openssl_3_3
+    pkgs.openssl_3_4
     pkgs.readline
     pkgs.sqlite
     pkgs.xh # HTTPie alternative

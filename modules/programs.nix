@@ -40,7 +40,7 @@
 
   programs.zsh = {
     enable = true;
-    initExtra = builtins.readFile ../config/.zshrc;
+    initContent = builtins.readFile ../config/.zshrc;
     autosuggestion = { enable = true; };
     enableCompletion = true;
     syntaxHighlighting = { enable = true; };

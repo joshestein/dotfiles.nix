@@ -8,10 +8,10 @@
     shell = pkgs.zsh;
   };
 
-  programs.zsh.enable = true;
+  # Nix is managed by Determinate, not nix-darwin
+  nix.enable = false;
 
-  # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
+  programs.zsh.enable = true;
 
   # Current karabiner service is broken
   # https://github.com/LnL7/nix-darwin/issues/1041
@@ -28,6 +28,8 @@
 
   system.configurationRevision = self.rev or self.dirtyRev or null;
 
+  system.primaryUser = username;
+
   system.defaults = {
     dock = {
       autohide = true;
@@ -42,7 +44,7 @@
     };
   };
 
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   homebrew = {
     enable = true;
