@@ -36,7 +36,7 @@
     pkgs.openssl_3_3
     pkgs.readline
     pkgs.sqlite
-    pkgs.xh
+    pkgs.xh # HTTPie alternative
     pkgs.xz
     pkgs.zlib
     pkgs.tcl
