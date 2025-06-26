@@ -12,7 +12,6 @@
     pkgs.imagemagick
     pkgs.jq
     pkgs.mosh
-    pkgs.ncspot # Spotify client
     pkgs.unstable.neovim
     pkgs.nerd-fonts.atkynson-mono
     pkgs.nerd-fonts.droid-sans-mono
