@@ -20,6 +20,7 @@
     changeDirWidgetCommand = "fd --type d --hidden --follow";
     defaultCommand = "fd --hidden --follow";
     fileWidgetCommand = "fd --hidden --follow";
+    tmux = { enableShellIntegration = true; };
   };
 
   programs.kitty = {
@@ -36,6 +37,11 @@
   programs.rbenv = {
     enable = true;
     enableZshIntegration = true;
+  };
+
+  programs.tmux = {
+    enable = true;
+    extraConfig = builtins.readFile ../config/tmux.conf;
   };
 
   programs.zsh = {
