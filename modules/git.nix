@@ -2,7 +2,7 @@
 {
   programs.git = {
     enable = true;
-    userName = "Josh";
+    userName = "Josh Stein";
     userEmail = "josh.e.stein@gmail.com";
     ignores = [ "*~" ".DS_Store" ".direnv" ".venv" ".idea" ".vscode" ];
     extraConfig = {
