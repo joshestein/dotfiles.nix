@@ -4,7 +4,7 @@
     enable = true;
     userName = "Josh Stein";
     userEmail = "josh.e.stein@gmail.com";
-    ignores = [ "*~" ".DS_Store" ".direnv" ".venv" ".idea" ".vscode" ];
+    ignores = [ "*~" ".DS_Store" ".direnv" ".venv" ".idea" ".vscode" "**/.claude/settings.local.json" "**/CLAUDE.local.md" ];
     extraConfig = {
       init = { defaultBranch = "main"; };
       pull = { ff = "only"; };
