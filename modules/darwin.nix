@@ -55,6 +55,7 @@
     };
 
     brews = [
+      "gettext" # Needed for git to correctly compile
       "goku"
       # {
       #   name = "emacs-plus@30";
