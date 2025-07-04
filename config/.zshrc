@@ -60,8 +60,8 @@ ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 # For some reason the nix `defaultCommand` and `fileWidgetCommand` options are not working
 export FZF_CTRL_T_COMMAND="fd --hidden --follow"
 
-bindkey '^F' fzf-cd-widget
-bindkey '^P' fzf-file-widget
-bindkey '^[[102;9u' fzf-cd-widget
-bindkey '^[[112;9u' fzf-file-widget
+bindkey '^P' fzf-cd-widget
+bindkey '^F' fzf-file-widget
+bindkey '^[[112;9u' fzf-cd-widget
+bindkey '^[[102;9u' fzf-file-widget
 
