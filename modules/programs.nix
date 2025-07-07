@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.atuin = {
     enable = true;
@@ -41,6 +42,9 @@
 
   programs.tmux = {
     enable = true;
+    plugins = [
+      pkgs.tmuxPlugins.resurrect
+    ];
     extraConfig = builtins.readFile ../config/tmux/tmux.conf;
   };
 
