@@ -57,6 +57,7 @@
     brews = [
       "gettext" # Needed for git to correctly compile
       "goku"
+      "postgresql@17"
       # {
       #   name = "emacs-plus@30";
       # }
