@@ -4,6 +4,7 @@
     pkgs.aspellDicts.en
     pkgs.coreutils
     pkgs.curl
+    pkgs.deno
     pkgs.ffmpeg
     pkgs.git-credential-manager
     pkgs.glow # Markdown preview
