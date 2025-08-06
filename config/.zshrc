@@ -43,6 +43,7 @@ SAVEHIST=1000
 
 [ -f $XDG_CONFIG_HOME/shell/functions.zsh ] && source $XDG_CONFIG_HOME/shell/functions.zsh
 [ -f $XDG_CONFIG_HOME/shell/git.zsh ] && source $XDG_CONFIG_HOME/shell/git.zsh
+[ -f $XDG_CONFIG_HOME/shell/tmux.zsh ] && source $XDG_CONFIG_HOME/shell/tmux.zsh
 [ -f $XDG_CONFIG_HOME/shell/venv.zsh ] && source $XDG_CONFIG_HOME/shell/venv.zsh
 [ -f $XDG_CONFIG_HOME/zsh/plugins/git ] && source $XDG_CONFIG_HOME/zsh/plugins/git/git.plugin/zsh
 
