@@ -1,6 +1,9 @@
 return {
   { -- Autoformat
     'stevearc/conform.nvim',
+    event = { 'BufWritePre' },
+    ---@module "conform"
+    ---@type conform.setupOpts
     opts = {
       log_level = vim.log.levels.DEBUG,
       notify_on_error = false,
@@ -21,9 +24,9 @@ return {
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
-        javascript = { { 'prettierd', 'prettier' } },
-        typescript = { { 'prettierd', 'prettier' } },
-        html = { { 'prettierd', 'prettier' } },
+        javascript = { 'prettierd', 'prettier', stop_after_first = true },
+        typescript = { 'prettierd', 'prettier', stop_after_first = true },
+        html = { 'prettierd', 'prettier', stop_after_first = true },
       },
       formatters = {
         black = {
