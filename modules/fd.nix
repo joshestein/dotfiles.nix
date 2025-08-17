@@ -51,6 +51,7 @@
       ".processing"
       ".pub-cache"
       ".pyenv"
+      ".rbenv"
       ".rustup"
       ".sonarlint"
       ".steam"
