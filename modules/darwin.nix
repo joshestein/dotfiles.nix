@@ -58,8 +58,8 @@
       "gettext" # Needed for git to correctly compile
       "git"
       "gh"
-      "goku"
       "postgresql@17"
+      "yqrashawn/goku/goku"
       # {
       #   name = "emacs-plus@30";
       # }
@@ -79,7 +79,6 @@
       "jimeh/emacs-builds" # for emacs-app
       # "d12frosted/emacs-plus" # for emacs-plus
       "nikitabobko/tap" # for Aerospace
-      "yqrashawn/goku"
     ];
   };
 }
