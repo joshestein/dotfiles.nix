@@ -39,7 +39,7 @@
     in
     {
       # MacOS
-      darwinConfigurations."joshstein-mac" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations."macbook" = nix-darwin.lib.darwinSystem {
         system = darwinSystem;
         modules = [
           # The platform the configuration will be used on.
