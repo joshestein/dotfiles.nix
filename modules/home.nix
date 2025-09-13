@@ -71,6 +71,7 @@
     "$HOME/.volta/bin"
   ] ++ lib.optionals pkgs.stdenv.isDarwin [
     "$HOME/Applications/flameshot.app/Contents/MacOS"
+    "/opt/homebrew/opt/postgresql@17/bin"
   ];
 
   home.sessionVariables = {
