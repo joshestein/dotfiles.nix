@@ -1,4 +1,4 @@
---- @since 25.2.7
+--- @since 25.5.31
 --- @sync entry
 
 local function setup(self, opts)
@@ -7,7 +7,7 @@ end
 
 local function entry(self)
 	local h = cx.active.current.hovered
-	ya.manager_emit(h and h.cha.is_dir and "enter" or "open", { hovered = not self.open_multi })
+	ya.emit(h and h.cha.is_dir and "enter" or "open", { hovered = not self.open_multi })
 end
 
 return { entry = entry, setup = setup }
