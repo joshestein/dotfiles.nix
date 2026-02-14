@@ -33,6 +33,7 @@
       g = "git";
       ga = "git add";
       gaa = "git add all";
+      gc = "git clone";
       gcmsg = "git commit -m";
       gcm = "git commit -m";
       gca = "git commit --amend";
