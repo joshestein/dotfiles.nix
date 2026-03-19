@@ -33,6 +33,7 @@
     pkgs.vscode
     pkgs.unstable.yazi
     pkgs.yt-dlp-light
+    pkgs.zed-editor
     # pkgs.zoom-us
 
     # pyenv dependencies
