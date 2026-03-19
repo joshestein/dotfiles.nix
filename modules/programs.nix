@@ -40,11 +40,6 @@
     enableZshIntegration = true;
   };
 
-  programs.rbenv = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
   programs.tmux = {
     enable = true;
     plugins = [
