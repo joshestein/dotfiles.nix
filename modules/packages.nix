@@ -35,7 +35,7 @@
     # pkgs.zoom-us
 
     # pyenv dependencies
-    pkgs.openssl_3_4
+    pkgs.openssl_3_6
     pkgs.readline
     pkgs.sqlite
     pkgs.xh # HTTPie alternative
