@@ -131,6 +131,7 @@
             inherit name;
             value = {
               source = ../config/${name};
+              force = true;
               recursive = true;
             };
           })
