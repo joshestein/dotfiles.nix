@@ -55,6 +55,7 @@
     };
 
     brews = [
+      "elixir"
       "gettext" # Needed for git to correctly compile
       "git"
       "gh"
