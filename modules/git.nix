@@ -15,10 +15,10 @@
       credential.helper = "${
           pkgs.git.override { withLibsecret = true; }
         }/bin/git-credential-libsecret";
-    };
-    user = {
-      name = "Josh Stein";
-      email = "josh.e.stein@gmail.com";
+      user = {
+        name = "Josh Stein";
+        email = "josh.e.stein@gmail.com";
+      };
     };
   };
 }
