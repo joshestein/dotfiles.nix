@@ -4,7 +4,7 @@
     enable = true;
     ignores = [ "*~" ".DS_Store" ".direnv" ".venv" ".idea" ".vscode" "**/.claude/settings.local.json" "**/CLAUDE.local.md" ];
     settings = {
-      aliases = {
+      alias = {
         diff = "diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'";
         last = "log -1 HEAD";
         unstage = "reset HEAD --";
