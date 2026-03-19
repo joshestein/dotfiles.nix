@@ -103,6 +103,7 @@
   xdg.configFile = 
     let
       shared = [
+        "atuin"
         "doom"
         "ideavim"
         "kitty"
