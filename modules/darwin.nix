@@ -70,7 +70,6 @@
       "firefox"
       "keycastr"
       "raycast"
-      "vlc"
     ];
     taps = [
       # This brew is leading to gcc native compilation errors

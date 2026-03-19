@@ -29,6 +29,7 @@
     pkgs.spotify
     pkgs.typescript
     pkgs.uv
+    pkgs.vlc
     pkgs.volta
     pkgs.vscode
     pkgs.unstable.yazi
