@@ -2,10 +2,13 @@
 {
   programs.git = {
     enable = true;
-    userName = "Josh Stein";
-    userEmail = "josh.e.stein@gmail.com";
     ignores = [ "*~" ".DS_Store" ".direnv" ".venv" ".idea" ".vscode" "**/.claude/settings.local.json" "**/CLAUDE.local.md" ];
-    extraConfig = {
+    settings = {
+      aliases = {
+        diff = "diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'";
+        last = "log -1 HEAD";
+        unstage = "reset HEAD --";
+      };
       init = { defaultBranch = "main"; };
       pull = { ff = "only"; };
       push = { autoSetupRemote = "true"; };
@@ -13,11 +16,9 @@
           pkgs.git.override { withLibsecret = true; }
         }/bin/git-credential-libsecret";
     };
-    delta = { enable = true; };
-    aliases = {
-      diff = "diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'";
-      last = "log -1 HEAD";
-      unstage = "reset HEAD --";
+    user = {
+      name = "Josh Stein";
+      email = "josh.e.stein@gmail.com";
     };
   };
 }

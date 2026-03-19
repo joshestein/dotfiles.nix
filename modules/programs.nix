@@ -10,6 +10,11 @@
     config.theme = "gruvbox-dark";
   };
 
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+  };
+
   programs.eza = {
     enable = true;
     enableZshIntegration = true;
