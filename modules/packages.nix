@@ -2,6 +2,7 @@
   home.packages = [
     pkgs.aspell
     pkgs.aspellDicts.en
+    pkgs.beamMinimal28Packages.elixir_1_19
     pkgs.coreutils
     pkgs.curl
     pkgs.deno

@@ -55,10 +55,8 @@
     };
 
     brews = [
-      "elixir"
       "gettext" # Needed for git to correctly compile
       "git"
-      "gh"
       "postgresql@17"
       "yqrashawn/goku/goku"
       # {
