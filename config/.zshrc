@@ -66,3 +66,7 @@ bindkey '^F' fzf-file-widget
 bindkey '^[[112;9u' fzf-cd-widget
 bindkey '^[[102;9u' fzf-file-widget
 
+# Auto-attach to last tmux session, or start a new tmux session if no session to attach to
+if [[ -n "$SSH_TTY" ]] && [[ -z "$TMUX" ]]; then
+  tmux attach 2>/dev/null || exec tmux -u new-session
+fi
