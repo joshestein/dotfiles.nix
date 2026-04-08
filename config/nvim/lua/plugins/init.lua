@@ -3,6 +3,7 @@ return {
   'HiPhish/rainbow-delimiters.nvim', -- Rainbow parentheses
   'github/copilot.vim',
   'justinmk/vim-sneak',
+  'subnut/nvim-ghost.nvim',
   'tpope/vim-repeat',
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   'tpope/vim-surround',
