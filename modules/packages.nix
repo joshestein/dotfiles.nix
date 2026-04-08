@@ -15,7 +15,7 @@
     pkgs.imagemagick
     pkgs.jq
     pkgs.mosh
-    pkgs.unstable.neovim
+    pkgs.neovim
     pkgs.nerd-fonts.atkynson-mono
     pkgs.nerd-fonts.droid-sans-mono
     pkgs.obsidian
