@@ -9,8 +9,10 @@
  :simlayer-threshold 130
  :main [
         {:des "Extra remappings"
-         :rules [[:non_us_backslash :grave_accent_and_tilde]]
-        }
+         :rules [
+                 [:non_us_backslash :grave_accent_and_tilde]
+                 [:!Rnon_us_backslash :!Sgrave_accent_and_tilde]
+                 ]}
         {:des "layer j"
          :rules [:layer-j
                  [:a :!S5] ;; js -> %
