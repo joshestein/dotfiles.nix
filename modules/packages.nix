@@ -31,7 +31,7 @@
     pkgs.uv
     pkgs.vlc-bin-universal
     pkgs.volta
-    pkgs.vscode
+    # pkgs.vscode
     pkgs.unstable.yazi
     pkgs.yt-dlp-light
     # pkgs.zoom-us

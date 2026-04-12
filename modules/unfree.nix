@@ -9,7 +9,7 @@
       "signal-desktop-bin"
       "slack"
       "spotify"
-      "vscode"
+      # "vscode"
       "zoom"
     ];
 }
