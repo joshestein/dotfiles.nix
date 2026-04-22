@@ -47,6 +47,7 @@
                   [:l :!S8]
                   [:semicolon :slash]
                   [:i :!Shyphen]
+                  [:comma :!Shyphen]
                   ]}
         ; TODO: make the layer automatically hold option when pressed
         {:des "layer semi-colon"
