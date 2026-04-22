@@ -9,6 +9,7 @@
   home.stateVersion = "25.05";
 
   home.shellAliases = {
+      c = "claude --dangerously-skip-permissions";
       cat = "lscat";
       hg = "history | grep";
       l = "lscat";
