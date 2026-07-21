@@ -55,8 +55,6 @@
     };
 
     brews = [
-      "gettext" # Needed for git to correctly compile
-      "git"
       "postgresql@17"
       "supabase/tap/supabase"
       "yqrashawn/goku/goku"
