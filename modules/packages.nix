@@ -46,8 +46,7 @@
     pkgs.tcl
   ] ++ lib.optionals pkgs.stdenv.isDarwin [
     # pkgs.appcleaner
-      # pkgs.karabiner-elements
-    pkgs.goku
+    # pkgs.karabiner-elements
   ] ++ lib.optionals pkgs.stdenv.isLinux [
     pkgs.acpilight
     pkgs.bluez
