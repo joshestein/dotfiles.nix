@@ -97,6 +97,16 @@
     GOKU_EDN_CONFIG_FILE = "$HOME/.config/karabiner/karabiner.edn";
   };
 
+  # Volta writes absolute /nix/store symlinks for its shims, which dangle as
+  # soon as nixpkgs bumps volta and the old store path is garbage collected.
+  # Repoint them on every switch so they track the installed volta. Volta still
+  # decides which shims exist (via `volta install`); nix only fixes the target.
+  home.activation.voltaShims = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    for f in "$HOME"/.volta/bin/*; do
+      [ -L "$f" ] && run ln -sfn ${pkgs.volta}/bin/volta-shim "$f"
+    done
+  '';
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
