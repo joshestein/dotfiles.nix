@@ -58,6 +58,7 @@
       "gettext" # Needed for git to correctly compile
       "git"
       "postgresql@17"
+      "supabase/tap/supabase"
       "yqrashawn/goku/goku"
       # {
       #   name = "emacs-plus@30";
@@ -76,11 +77,13 @@
       # This brew is leading to gcc native compilation errors
       "jimeh/emacs-builds" # for emacs-app
       # "d12frosted/emacs-plus" # for emacs-plus
+      "supabase/tap"
     ];
 
     extraConfig = ''
       tap "nikitabobko/tap", trusted: true
       tap "yqrashawn/goku", trusted: true
+      tap "supabase/tap", trusted: true
     '';
   };
 }
