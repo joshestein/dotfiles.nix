@@ -12,9 +12,13 @@
       init = { defaultBranch = "main"; };
       pull = { ff = "only"; };
       push = { autoSetupRemote = "true"; };
-      credential.helper = "${
-          pkgs.git.override { withLibsecret = true; }
-        }/bin/git-credential-libsecret";
+      # libsecret needs a D-Bus Secret Service, which macOS has no equivalent
+      # of, so it fails every lookup there. The osxkeychain helper ships in the
+      # plain pkgs.git, avoiding the extra derivation the override forces.
+      credential.helper =
+        if pkgs.stdenv.isDarwin
+        then "${pkgs.git}/bin/git-credential-osxkeychain"
+        else "${pkgs.git.override { withLibsecret = true; }}/bin/git-credential-libsecret";
       user = {
         name = "Josh Stein";
         email = "josh.e.stein@gmail.com";
