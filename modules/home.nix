@@ -63,14 +63,14 @@
   };
 
   home.sessionPath = [
+    "$HOME/.local/share/nvim/mason/bin/" # All the LSPs live here
+    "$HOME/.volta/bin"
     "$HOME/.local/bin"
     "$HOME/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/"
     "$HOME/.local/share/JetBrains/Toolbox/apps/pycharm-professional/bin/"
     "$HOME/.local/share/JetBrains/Toolbox/apps/webstorm/bin/"
-    "$HOME/.local/share/nvim/mason/bin/" # All the LSPs live here
     "$HOME/.config/emacs/bin" # doom
     "$HOME/.emacs.d/bin" # doom
-    "$HOME/.volta/bin"
   ] ++ lib.optionals pkgs.stdenv.isDarwin [
     "$HOME/.docker/bin" # docker
     "$HOME/Applications/flameshot.app/Contents/MacOS"
