@@ -107,6 +107,11 @@
     done
   '';
 
+  # Default-app associations. Config lives in config/duti/duti.conf
+  home.activation.duti = lib.hm.dag.entryAfter [ "writeBoundary" ] (lib.optionalString pkgs.stdenv.isDarwin ''
+    run ${pkgs.duti}/bin/duti "$HOME/.config/duti/duti.conf"
+  '');
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
@@ -126,6 +131,7 @@
 
       darwin = [
         "aerospace"
+        "duti"
         "karabiner"
       ];
 

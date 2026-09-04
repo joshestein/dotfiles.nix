@@ -47,6 +47,7 @@
   ] ++ lib.optionals pkgs.stdenv.isDarwin [
     # pkgs.appcleaner
     # pkgs.karabiner-elements
+    pkgs.duti
   ] ++ lib.optionals pkgs.stdenv.isLinux [
     pkgs.acpilight
     pkgs.bluez
