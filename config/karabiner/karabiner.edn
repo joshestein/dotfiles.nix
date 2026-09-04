@@ -14,7 +14,6 @@
                  [:c :!Sclose_bracket ["layer-j" 1]] ;; jc insert }
                  [:e :open_bracket ["layer-j" 1]] ;; je insert [
                  [:r :close_bracket ["layer-j" 1]] ;; jr insert ]
-                 [:w :!S2 ["layer-j" 1]] ;; jw -> @
                  ]}
         {:des "layer f"
          :rules [[:f ["layer-f" 1] nil {:afterup ["layer-f" 0] :alone :f}] ;; tap -> f, hold -> layer
