@@ -1,70 +1,79 @@
-{:main [
+{:simlayers {
+  :layer-f {:key :f}
+  :layer-d {:key :d}
+  :layer-s {:key :s}
+  :layer-j {:key :j}
+  :layer-semi-colon {:key :semicolon}
+  :layer-space {:key :spacebar}
+  }
+ :simlayer-threshold 500
+ :main [
         {:des "Extra remappings"
          :rules [
                  [:non_us_backslash :grave_accent_and_tilde]
                  [:!Rnon_us_backslash :!Sgrave_accent_and_tilde]
                  ]}
         {:des "layer j"
-         :rules [[:j ["layer-j" 1] nil {:afterup ["layer-j" 0] :alone :j}] ;; tap -> j, hold -> layer (no timeout flush)
-                 [:a :!S5 ["layer-j" 1]] ;; js -> %
-                 [:s :!S4 ["layer-j" 1]] ;; js -> $
-                 [:d :!S9 ["layer-j" 1]] ;; jd insert (
-                 [:f :!S0 ["layer-j" 1]] ;; jf insert )
-                 [:x :!Sopen_bracket ["layer-j" 1]] ;; jx insert {
-                 [:c :!Sclose_bracket ["layer-j" 1]] ;; jc insert }
-                 [:e :open_bracket ["layer-j" 1]] ;; je insert [
-                 [:r :close_bracket ["layer-j" 1]] ;; jr insert ]
+         :rules [:layer-j
+                 [:a :!S5] ;; js -> %
+                 [:s :!S4] ;; js -> $
+                 [:d :!S9] ;; jd insert (
+                 [:f :!S0] ;; jf insert )
+                 [:x :!Sopen_bracket] ;; jx insert {
+                 [:c :!Sclose_bracket] ;; jc insert }
+                 [:e :open_bracket] ;; je insert [
+                 [:r :close_bracket] ;; jr insert ]
                  ]}
         {:des "layer f"
-         :rules [[:f ["layer-f" 1] nil {:afterup ["layer-f" 0] :alone :f}] ;; tap -> f, hold -> layer
-                 [:j :!S1 ["layer-f" 1]] ;; fj insert !
-                 [:k :equal_sign ["layer-f" 1]] ;; fk insert =
-                 [:l :!S7 ["layer-f" 1]] ;; fl insert &
-                 [:semicolon :!Sbackslash ["layer-f" 1]] ;; f; insert |
-                 [:m :!S2 ["layer-f" 1]] ;; fm -> @
+         :rules [:layer-f
+                 [:j :!S1] ;; fj insert !
+                 [:k :equal_sign] ;; fk insert =
+                 [:l :!S7] ;; fl insert &
+                 [:semicolon :!Sbackslash] ;; f; insert |
+                 [:m :!S2] ;; fm -> @
                  ]}
         {:des "layer s"
-          :rules [[:s ["layer-s" 1] nil {:afterup ["layer-s" 0] :alone :s}] ;; tap -> s, hold -> layer
-                  [:d [:equal_sign :!Speriod] ["layer-s" 1]]
-                  [:f [:!S9 :!S0 :spacebar :equal_sign :!Speriod :spacebar :!Sopen_bracket :!Sclose_bracket :left_arrow] ["layer-s" 1]]
-                  [:x :!Scomma ["layer-s" 1]] ;; sx -> <
-                  [:c :!Speriod ["layer-s" 1]] ;; sc -> <
+          :rules [:layer-s
+                  [:d [:equal_sign :!Speriod]]
+                  [:f [:!S9 :!S0 :spacebar :equal_sign :!Speriod :spacebar :!Sopen_bracket :!Sclose_bracket :left_arrow]]
+                  [:x :!Scomma] ;; sx -> <
+                  [:c :!Speriod] ;; sc -> .
                   ]}
         {:des "layer d"
-          :rules [[:d ["layer-d" 1] nil {:afterup ["layer-d" 0] :alone :d}] ;; tap -> d, hold -> layer
-                  [:j :!Sequal_sign ["layer-d" 1]]
-                  [:k :hyphen ["layer-d" 1]]
-                  [:l :!S8 ["layer-d" 1]]
-                  [:semicolon :slash ["layer-d" 1]]
-                  [:i :!Shyphen ["layer-d" 1]]
-                  [:comma :!Shyphen ["layer-d" 1]]
+          :rules [:layer-d
+                  [:j :!Sequal_sign]
+                  [:k :hyphen]
+                  [:l :!S8]
+                  [:semicolon :slash]
+                  [:i :!Shyphen]
+                  [:comma :!Shyphen]
                   ]}
         ; TODO: make the layer automatically hold option when pressed
         {:des "layer semi-colon"
-         :rules [[:semicolon ["layer-semi-colon" 1] nil {:afterup ["layer-semi-colon" 0] :alone :semicolon}] ;; tap -> ;, hold -> layer
-                 [:a :!O1 ["layer-semi-colon" 1]]
-                 [:s :!O2 ["layer-semi-colon" 1]]
-                 [:d :!O3 ["layer-semi-colon" 1]]
-                 [:1 :!O1 ["layer-semi-colon" 1]]
-                 [:2 :!O2 ["layer-semi-colon" 1]]
-                 [:3 :!O3 ["layer-semi-colon" 1]]
-                 [:4 :!O4 ["layer-semi-colon" 1]]
-                 [:5 :!O5 ["layer-semi-colon" 1]]
-                 [:f :!Of ["layer-semi-colon" 1]]
-                 [:h :!Oh ["layer-semi-colon" 1]]
-                 [:j :!Oj ["layer-semi-colon" 1]]
-                 [:k :!Ok ["layer-semi-colon" 1]]
-                 [:l :!Ol ["layer-semi-colon" 1]]
-                 [:q :!Cq ["layer-semi-colon" 1]]
+         :rules [:layer-semi-colon
+                 [:a :!O1]
+                 [:s :!O2]
+                 [:d :!O3]
+                 [:1 :!O1]
+                 [:2 :!O2]
+                 [:3 :!O3]
+                 [:4 :!O4]
+                 [:5 :!O5]
+                 [:f :!Of]
+                 [:h :!Oh]
+                 [:j :!Oj]
+                 [:k :!Ok]
+                 [:l :!Ol]
+                 [:q :!Cq]
                  ]}
         {:des "layer space"
-          :rules [[:spacebar ["layer-space" 1] nil {:afterup ["layer-space" 0] :alone :spacebar}] ;; tap -> space, hold -> layer
-                  [:n :down_arrow ["layer-space" 1]]
-                  [:p :up_arrow ["layer-space" 1]]
-                  [:j :down_arrow ["layer-space" 1]]
-                  [:k :up_arrow ["layer-space" 1]]
-                  [:h :left_arrow ["layer-space" 1]]
-                  [:l :right_arrow ["layer-space" 1]]
+          :rules [:layer-space
+                  [:n :down_arrow]
+                  [:p :up_arrow]
+                  [:j :down_arrow]
+                  [:k :up_arrow]
+                  [:h :left_arrow]
+                  [:l :right_arrow]
                   ]}
         {:des "Caps is escape when tapped, left command when held"
          :rules [[:##caps_lock :left_command nil {:alone :escape}]]}
