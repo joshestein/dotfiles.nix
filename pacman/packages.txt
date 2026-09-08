@@ -12,7 +12,6 @@ nitrogen
 pcmanfm
 postgresql
 ranger
-slack-desktop
 tlp
 tlp-rdw
 tmux
