@@ -29,7 +29,6 @@
     pkgs.spotify
     pkgs.typescript
     pkgs.uv
-    pkgs.vlc-bin-universal
     pkgs.volta
     # pkgs.vscode
     pkgs.unstable.yazi
@@ -48,6 +47,7 @@
     # pkgs.appcleaner
     # pkgs.karabiner-elements
     pkgs.duti
+    pkgs.vlc-bin-universal
   ] ++ lib.optionals pkgs.stdenv.isLinux [
     pkgs.acpilight
     pkgs.bluez
