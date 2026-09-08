@@ -25,19 +25,5 @@
       };
     };
 
-    playerctld = {
-      Unit = {
-        Description = "Keep track of media player activity";
-      };
-
-      Service = {
-        Type = "oneshot";
-        ExecStart = "${pkgs.playerctl}/bin/playerctld daemon";
-      };
-
-      Install = {
-        WantedBy = [ "default.target" ];
-      };
-    };
   };
 }
