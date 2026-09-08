@@ -4,7 +4,6 @@ packages=(
     "tlp"
     "tlp-rdw"
     "slack-desktop"
-    "zoom"
 )
 
 for package in "${packages[@]}"; do
