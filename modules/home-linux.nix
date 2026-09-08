@@ -25,17 +25,14 @@
       };
     };
 
-    pulseaudio = {
+    playerctld = {
       Unit = {
-        Description = "PulseAudio Sound System";
-        Documentation = "man:pulseaudio(1)";
-        After = [ "sound.target" ];
+        Description = "Keep track of media player activity";
       };
 
       Service = {
-        Type = "notify";
-        ExecStart = "${pkgs.pulseaudioFull}/bin/pulseaudio";
-        Restart = "always";
+        Type = "oneshot";
+        ExecStart = "${pkgs.playerctl}/bin/playerctld daemon";
       };
 
       Install = {
