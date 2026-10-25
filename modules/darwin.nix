@@ -11,6 +11,16 @@
   # Nix is managed by Determinate, not nix-darwin
   nix.enable = false;
 
+  # nix.gc is unavailable with nix.enable = false, so schedule GC by hand
+  launchd.daemons.nix-gc = {
+    command = "/nix/var/nix/profiles/default/bin/nix-collect-garbage --delete-older-than 14d";
+    serviceConfig = {
+      StartCalendarInterval = [{ Weekday = 0; Hour = 3; Minute = 0; }];
+      StandardErrorPath = "/var/log/nix-gc.log";
+      StandardOutPath = "/var/log/nix-gc.log";
+    };
+  };
+
   programs.zsh.enable = true;
 
   # Current karabiner service is broken
