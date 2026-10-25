@@ -3,6 +3,7 @@
     pkgs.aspell
     pkgs.aspellDicts.en
     pkgs.beamMinimal28Packages.elixir_1_19
+    pkgs.caddy
     pkgs.coreutils
     pkgs.curl
     pkgs.deno
