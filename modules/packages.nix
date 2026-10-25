@@ -11,7 +11,7 @@
     pkgs.glow # Markdown preview
     pkgs.gh
     pkgs.go
-    pkgs.google-chrome
+    pkgs.unstable.google-chrome
     pkgs.imagemagick
     pkgs.jq
     pkgs.mosh
