@@ -21,6 +21,7 @@
     pkgs.nerd-fonts.droid-sans-mono
     pkgs.unstable.obsidian
     pkgs.poppler # PDF preview
+    pkgs.qpdf
     pkgs.ripgrep
     pkgs.rsync
     pkgs.rustup
