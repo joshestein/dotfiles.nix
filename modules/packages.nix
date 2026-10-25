@@ -9,7 +9,7 @@
     pkgs.ffmpeg
     pkgs.git-credential-manager
     pkgs.glow # Markdown preview
-    pkgs.gh
+    pkgs.unstable.gh
     pkgs.go
     pkgs.unstable.google-chrome
     pkgs.imagemagick
