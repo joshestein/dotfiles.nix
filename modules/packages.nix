@@ -24,9 +24,9 @@
     pkgs.rsync
     pkgs.rustup
     pkgs.shellcheck
-    pkgs.spotify
     pkgs.unstable.signal-desktop
     pkgs.unstable.slack
+    pkgs.unstable.spotify
     pkgs.typescript
     pkgs.uv
     pkgs.volta
