@@ -18,7 +18,7 @@
     pkgs.neovim
     pkgs.nerd-fonts.atkynson-mono
     pkgs.nerd-fonts.droid-sans-mono
-    pkgs.obsidian
+    pkgs.unstable.obsidian
     pkgs.poppler # PDF preview
     pkgs.ripgrep
     pkgs.rsync
