@@ -52,7 +52,7 @@
       free = "free -h";
       grep = "grep --color=auto";
       mv = "mv -iv";
-      rm = "rm -iv";
+      rm = "rm -i";
 
       "..." = "../..";
       "...." = "../../..";
