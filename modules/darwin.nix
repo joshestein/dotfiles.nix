@@ -11,9 +11,16 @@
   # Nix is managed by Determinate, not nix-darwin
   nix.enable = false;
 
-  # nix.gc is unavailable with nix.enable = false, so schedule GC by hand
+  # nix.gc is unavailable with nix.enable = false, so schedule GC by hand.
+  # Runs as root, so nix-collect-garbage only prunes root/system profiles;
+  # the user profile (home-manager-path) needs its generations pruned explicitly.
   launchd.daemons.nix-gc = {
-    command = "/nix/var/nix/profiles/default/bin/nix-collect-garbage --delete-older-than 14d";
+    script = ''
+      bin=/nix/var/nix/profiles/default/bin
+      $bin/nix-env --profile ${homeDirectory}/.local/state/nix/profiles/profile --delete-generations 14d
+      $bin/nix-collect-garbage --delete-older-than 14d
+      $bin/nix store optimise
+    '';
     serviceConfig = {
       StartCalendarInterval = [{ Weekday = 0; Hour = 3; Minute = 0; }];
       StandardErrorPath = "/var/log/nix-gc.log";
