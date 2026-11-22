@@ -81,11 +81,17 @@
     ];
 
     casks = [
-      "emacs-app"
       "aerospace"
+      "emacs-app"
       "firefox"
+      "google-chrome"
       "keycastr"
+      "obsidian"
       "raycast"
+      "signal"
+      "slack"
+      "spotify"
+      "vlc"
       "zed"
     ];
     taps = [

@@ -12,23 +12,18 @@
     pkgs.glow # Markdown preview
     pkgs.unstable.gh
     pkgs.go
-    pkgs.unstable.google-chrome
     pkgs.imagemagick
     pkgs.jq
     pkgs.mosh
     pkgs.neovim
     pkgs.nerd-fonts.atkynson-mono
     pkgs.nerd-fonts.droid-sans-mono
-    pkgs.unstable.obsidian
     pkgs.poppler # PDF preview
     pkgs.qpdf
     pkgs.ripgrep
     pkgs.rsync
     pkgs.rustup
     pkgs.shellcheck
-    pkgs.unstable.signal-desktop
-    pkgs.unstable.slack
-    pkgs.unstable.spotify
     pkgs.typescript
     pkgs.uv
     pkgs.volta
@@ -49,8 +44,14 @@
     # pkgs.appcleaner
     # pkgs.karabiner-elements
     pkgs.duti
-    pkgs.vlc-bin-universal
   ] ++ lib.optionals pkgs.stdenv.isLinux [
+    # GUI apps: installed as Homebrew casks on darwin (see darwin.nix)
+    pkgs.unstable.google-chrome
+    pkgs.unstable.obsidian
+    pkgs.unstable.signal-desktop
+    pkgs.unstable.slack
+    pkgs.unstable.spotify
+
     pkgs.acpilight
     pkgs.bluez
     pkgs.bluez-tools
