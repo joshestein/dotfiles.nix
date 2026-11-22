@@ -82,8 +82,10 @@
 
     casks = [
       "aerospace"
+      "docker-desktop"
       "emacs-app"
       "firefox"
+      "flameshot"
       "google-chrome"
       "keycastr"
       "obsidian"
